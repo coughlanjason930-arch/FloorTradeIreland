@@ -1,0 +1,2582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floor Trade Ireland – Floors that age beautifully</title>
+  <meta name="description" content="Premium flooring supplied and fitted across Ireland. Laminate, carpet, vinyl, artificial grass. Free nationwide delivery. Showroom in Summerhill, Co. Meath." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --oak: #c8a96e; --oak-d: #a07840; --ink: #1a1714;
+      --warm: #f5f0e8; --mid: #e8dfd0; --muted: #7a6f65;
+      --white: #ffffff; --radius: 6px; --max: 1200px;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--ink); background: var(--white); line-height: 1.7; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .btn { display: inline-block; padding: 14px 32px; border-radius: var(--radius); font-weight: 600; font-size: .95rem; letter-spacing: .03em; cursor: pointer; transition: background .2s, color .2s, transform .15s; border: none; font-family: var(--sans); }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--oak); color: var(--white); }
+    .btn-primary:hover { background: var(--oak-d); }
+    .btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+    .btn-outline:hover { background: var(--ink); color: var(--white); }
+    .btn-white { background: var(--white); color: var(--ink); }
+    .btn-white:hover { background: var(--warm); }
+    .section-label { font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--oak); margin-bottom: 12px; }
+    .section-title { font-family: var(--serif); font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 600; line-height: 1.2; }
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .6s, transform .6s; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* HEADER */
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: background .3s, box-shadow .3s; }
+    #site-header.scrolled { background: rgba(255,255,255,.97); box-shadow: 0 1px 16px rgba(0,0,0,.08); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo img { height: 44px; width: auto; filter: brightness(0) invert(1); transition: filter .3s; }
+    #site-header.scrolled .nav-logo img { filter: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: .9rem; font-weight: 500; color: rgba(255,255,255,.88); transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    #site-header.scrolled .nav-links a { color: var(--muted); }
+    #site-header.scrolled .nav-links a:hover { color: var(--ink); }
+    .nav-cta { background: var(--oak); color: var(--white) !important; padding: 8px 20px; border-radius: var(--radius); font-weight: 600 !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: background .3s; }
+    #site-header.scrolled .nav-toggle span { background: var(--ink); }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--ink); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--serif); font-size: 2rem; color: var(--white); }
+    .mobile-menu a:hover { color: var(--oak); }
+    .mobile-close { position: absolute; top: 24px; right: 24px; font-size: 2.4rem; color: var(--white); cursor: pointer; }
+
+    /* HERO */
+    #hero { min-height: 100vh; background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.3) 60%, rgba(0,0,0,.5) 100%), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&auto=format&fit=crop') center/cover no-repeat; display: flex; align-items: center; }
+    .hero-inner { padding: 120px 0 80px; max-width: 680px; }
+    .hero-badge { display: inline-block; background: rgba(200,169,110,.25); border: 1px solid var(--oak); color: var(--oak); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 24px; }
+    .hero-title { font-family: var(--serif); font-size: clamp(2.6rem,6vw,4.5rem); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
+    .hero-title em { color: var(--oak); font-style: italic; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,.85); margin-bottom: 40px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-stats { margin-top: 64px; display: flex; gap: 48px; border-top: 1px solid rgba(255,255,255,.2); padding-top: 32px; flex-wrap: wrap; }
+    .hero-stat-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--white); line-height: 1; }
+    .hero-stat-label { font-size: .82rem; color: rgba(255,255,255,.65); margin-top: 4px; }
+
+    /* TRUST BAR */
+    #trust-bar { background: var(--ink); padding: 18px 0; }
+    .trust-items { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.75); font-size: .88rem; font-weight: 500; }
+
+    /* OFFERS */
+    #offers { padding: 100px 0; background: var(--warm); }
+    .offers-header { text-align: center; margin-bottom: 56px; }
+    .offers-header p { color: var(--muted); max-width: 520px; margin: 16px auto 0; }
+    .offers-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 28px; }
+    .offer-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.06); transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; }
+    .offer-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.1); }
+    .offer-img { height: 220px; object-fit: cover; width: 100%; }
+    .offer-badge { display: inline-block; background: var(--oak); color: var(--white); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+    .offer-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+    .offer-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }
+    .offer-desc { color: var(--muted); font-size: .9rem; flex: 1; margin-bottom: 20px; }
+
+    /* CRAFTSMANSHIP */
+    #craftsmanship { padding: 100px 0; }
+    .craft-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .craft-img-wrap { position: relative; }
+    .craft-img { width: 100%; height: 540px; object-fit: cover; border-radius: 12px; }
+    .craft-img-accent { position: absolute; bottom: -28px; right: -28px; width: 180px; height: 180px; background: var(--oak); border-radius: 12px; z-index: -1; }
+    .craft-years { position: absolute; top: 24px; left: 24px; background: var(--ink); color: var(--white); padding: 20px 24px; border-radius: 10px; text-align: center; }
+    .craft-years-num { font-family: var(--serif); font-size: 2.4rem; font-weight: 700; color: var(--oak); display: block; line-height: 1; }
+    .craft-years-label { font-size: .8rem; color: rgba(255,255,255,.7); margin-top: 4px; }
+    .craft-content p { color: var(--muted); margin: 20px 0 32px; font-size: 1.05rem; line-height: 1.8; }
+    .craft-features { display: flex; flex-direction: column; gap: 20px; margin-bottom: 36px; }
+    .craft-feature { display: flex; gap: 16px; align-items: flex-start; }
+    .craft-feature-icon { width: 44px; height: 44px; background: var(--warm); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .craft-feature-title { font-weight: 600; margin-bottom: 4px; }
+    .craft-feature-desc { font-size: .88rem; color: var(--muted); }
+
+    /* PRODUCTS */
+    #products { padding: 100px 0; background: var(--warm); }
+    .products-header { text-align: center; margin-bottom: 48px; }
+    .products-header p { color: var(--muted); max-width: 540px; margin: 16px auto 0; }
+    .products-filter { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+    .filter-btn { padding: 8px 22px; border-radius: 100px; border: 1.5px solid var(--mid); background: var(--white); font-size: .88rem; font-weight: 500; cursor: pointer; transition: all .2s; color: var(--ink); font-family: var(--sans); }
+    .filter-btn.active, .filter-btn:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 24px; }
+    .product-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.05); cursor: pointer; transition: transform .2s, box-shadow .2s; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,.1); }
+    .product-img-wrap { position: relative; height: 200px; overflow: hidden; background: var(--mid); }
+    .product-img { width: 100%; height: 100%; object-fit: cover; }
+    .product-cat-badge { position: absolute; top: 10px; left: 10px; background: var(--ink); color: var(--white); font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; }
+    .product-body { padding: 18px; }
+    .product-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; line-height: 1.3; }
+    .product-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+    .product-cta { font-size: .82rem; font-weight: 600; color: var(--oak); }
+    .product-colours { font-size: .78rem; color: var(--muted); }
+
+    /* PRODUCT MODAL */
+    .prod-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 3000; align-items: center; justify-content: center; padding: 20px; overflow-y: auto; }
+    .prod-modal-overlay.open { display: flex; }
+    .prod-modal { background: var(--white); border-radius: 16px; width: 100%; max-width: 900px; display: grid; grid-template-columns: 1fr 1fr; position: relative; margin: auto; }
+    .prod-modal-preview { background: var(--mid); border-radius: 16px 0 0 16px; overflow: hidden; min-height: 460px; position: relative; }
+    .prod-modal-preview img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; transition: opacity .3s; }
+    .modal-close { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; background: rgba(0,0,0,.5); border: none; border-radius: 50%; color: var(--white); font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; line-height: 1; }
+    .prod-modal-info { padding: 32px; display: flex; flex-direction: column; max-height: 88vh; overflow-y: auto; }
+    .modal-category { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--oak); margin-bottom: 6px; }
+    .modal-title { font-family: var(--serif); font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
+    .modal-desc { color: var(--muted); font-size: .9rem; line-height: 1.75; margin-bottom: 20px; }
+    .modal-colours-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
+    .modal-colours-label { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .modal-selected-colour { font-size: .82rem; color: var(--muted); }
+    .modal-selected-colour span { font-weight: 600; color: var(--ink); }
+    .modal-swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; max-height: 220px; overflow-y: auto; padding-right: 4px; }
+    .swatch-wrap { display: flex; flex-direction: column; align-items: center; width: 60px; }
+    .colour-swatch { width: 60px; height: 60px; border-radius: 8px; overflow: hidden; cursor: pointer; border: 2.5px solid transparent; transition: border-color .2s, transform .15s; flex-shrink: 0; }
+    .colour-swatch:hover { transform: scale(1.06); }
+    .colour-swatch.active { border-color: var(--oak); }
+    .colour-swatch img { width: 100%; height: 100%; object-fit: cover; }
+    .colour-swatch-name { font-size: .65rem; text-align: center; color: var(--muted); margin-top: 4px; line-height: 1.2; word-break: break-word; }
+    .modal-actions { display: flex; flex-direction: column; gap: 10px; margin-top: auto; padding-top: 8px; }
+    .modal-actions .btn { width: 100%; text-align: center; padding: 14px; font-size: .95rem; }
+    .btn-gold { background: var(--oak); color: var(--white); }
+    .btn-gold:hover { background: var(--oak-d); }
+
+    /* GALLERY */
+    #gallery { padding: 100px 0; }
+    .gallery-header { text-align: center; margin-bottom: 48px; }
+    .gallery-header p { color: var(--muted); max-width: 480px; margin: 16px auto 0; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 16px; }
+    .gallery-item { overflow: hidden; border-radius: 10px; cursor: pointer; position: relative; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,.65)); color: var(--white); font-size: .82rem; font-weight: 500; padding: 28px 14px 12px; opacity: 0; transition: opacity .3s; }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+    .g-large { grid-column: span 8; height: 420px; }
+    .g-med { grid-column: span 4; height: 420px; }
+    .g-sm { grid-column: span 4; height: 280px; }
+
+    /* VISUALISER */
+    #visualiser { padding: 100px 0; background: var(--ink); }
+    .vis-header { text-align: center; margin-bottom: 56px; }
+    .vis-header .section-label { color: var(--oak); }
+    .vis-header .section-title { color: var(--white); }
+    .vis-header p { color: rgba(255,255,255,.6); max-width: 480px; margin: 16px auto 0; }
+    .vis-wrap { display: grid; grid-template-columns: 1fr 260px; gap: 40px; align-items: start; }
+    .vis-room { border-radius: 12px; overflow: hidden; position: relative; background: #2a2520; aspect-ratio: 16/9; }
+    .vis-room img { width: 100%; height: 100%; object-fit: cover; transition: opacity .4s; }
+    .vis-label { position: absolute; bottom: 16px; left: 16px; background: rgba(0,0,0,.6); color: var(--white); font-size: .85rem; font-weight: 500; padding: 6px 14px; border-radius: 100px; backdrop-filter: blur(6px); }
+    .vis-panel { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 24px; }
+    .vis-panel h4 { color: var(--white); font-weight: 600; margin-bottom: 18px; font-size: .95rem; }
+    .swatch-list { display: flex; flex-direction: column; gap: 8px; }
+    .swatch-item { display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 8px 12px; border-radius: 8px; border: 1.5px solid transparent; transition: all .2s; }
+    .swatch-item:hover { background: rgba(255,255,255,.05); }
+    .swatch-item.active { border-color: var(--oak); background: rgba(200,169,110,.12); }
+    .swatch-thumb { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
+    .swatch-name { color: var(--white); font-size: .85rem; font-weight: 500; }
+    .swatch-type { color: rgba(255,255,255,.45); font-size: .72rem; margin-top: 2px; }
+
+    /* TESTIMONIALS */
+    #testimonials { padding: 100px 0; background: var(--warm); }
+    .t-header { text-align: center; margin-bottom: 56px; }
+    .t-header p { color: var(--muted); max-width: 480px; margin: 16px auto 0; }
+    .reviews-summary { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 48px; }
+    .stars { color: #f5a623; font-size: 1.4rem; letter-spacing: 2px; }
+    .reviews-avg { font-family: var(--serif); font-size: 2rem; font-weight: 700; }
+    .reviews-count { color: var(--muted); font-size: .9rem; }
+    .t-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 28px; }
+    .t-card { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 2px 16px rgba(0,0,0,.05); display: flex; flex-direction: column; gap: 16px; transition: transform .2s; }
+    .t-card:hover { transform: translateY(-3px); }
+    .t-stars { color: #f5a623; font-size: 1rem; letter-spacing: 2px; }
+    .t-quote { font-family: var(--serif); font-size: 1.05rem; line-height: 1.7; flex: 1; }
+    .t-author { display: flex; align-items: center; gap: 12px; }
+    .t-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--mid); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .95rem; color: var(--muted); flex-shrink: 0; }
+    .t-name { font-weight: 600; font-size: .9rem; }
+    .t-location { font-size: .8rem; color: var(--muted); }
+
+    /* FAQ */
+    #faq { padding: 100px 0; }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .faq-sidebar p { color: var(--muted); margin: 20px 0 32px; line-height: 1.8; }
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--mid); }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 22px 0; font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--ink); font-family: var(--sans); }
+    .faq-icon { width: 28px; height: 28px; background: var(--warm); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; transition: background .2s, transform .3s; color: var(--oak); font-weight: 400; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--oak); color: var(--white); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-a-inner { padding-bottom: 20px; color: var(--muted); font-size: .95rem; line-height: 1.8; }
+    .faq-item.open .faq-a { max-height: 300px; }
+
+    /* CONTACT */
+    #contact { padding: 100px 0; background: var(--warm); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+    .contact-info > p { color: var(--muted); margin: 20px 0 40px; line-height: 1.8; }
+    .contact-details { display: flex; flex-direction: column; gap: 24px; margin-bottom: 36px; }
+    .contact-detail { display: flex; align-items: flex-start; gap: 16px; }
+    .contact-detail-icon { width: 44px; height: 44px; background: var(--white); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    .contact-detail-label { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .contact-detail-value { font-weight: 500; }
+    .contact-detail-value a:hover { color: var(--oak); }
+    .hours-box { background: var(--white); border-radius: 10px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+    .hours-box h4 { font-weight: 600; margin-bottom: 12px; }
+    .hours-row { display: flex; justify-content: space-between; font-size: .9rem; padding: 6px 0; border-bottom: 1px solid var(--mid); }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day { color: var(--muted); }
+    .contact-form-wrap { background: var(--white); border-radius: 16px; padding: 48px; box-shadow: 0 4px 32px rgba(0,0,0,.06); }
+    .form-title { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 8px; }
+    .form-sub { color: var(--muted); font-size: .9rem; margin-bottom: 32px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1.5px solid var(--mid); border-radius: var(--radius); font-family: var(--sans); font-size: .95rem; color: var(--ink); background: var(--white); outline: none; transition: border-color .2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--oak); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-success { display: none; text-align: center; padding: 32px; }
+    .form-success-icon { font-size: 3rem; margin-bottom: 16px; }
+    .form-success h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 8px; }
+    .form-success p { color: var(--muted); }
+
+    /* MAP */
+    #map-section { height: 400px; }
+    #map-section iframe { width: 100%; height: 100%; border: none; filter: grayscale(20%); }
+
+    /* WHATSAPP FLOAT */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.4); cursor: pointer; transition: transform .2s; }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-float svg { width: 30px; height: 30px; fill: var(--white); }
+    .wa-tooltip { position: absolute; right: 70px; background: var(--ink); color: var(--white); font-size: .82rem; padding: 6px 14px; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .2s; }
+    .wa-float:hover .wa-tooltip { opacity: 1; }
+    .scroll-top { position: fixed; bottom: 28px; left: 28px; z-index: 900; width: 44px; height: 44px; background: rgba(255,255,255,.9); border: 1px solid var(--mid); border-radius: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.1rem; box-shadow: 0 2px 12px rgba(0,0,0,.1); opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .scroll-top.visible { opacity: 1; pointer-events: auto; }
+    .scroll-top:hover { background: var(--ink); color: var(--white); }
+
+    /* FOOTER */
+    footer { background: var(--ink); color: rgba(255,255,255,.75); padding: 72px 0 36px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+    .footer-logo img { height: 40px; width: auto; margin-bottom: 16px; }
+    .footer-brand p { font-size: .88rem; line-height: 1.8; max-width: 260px; }
+    .footer-social { display: flex; gap: 12px; margin-top: 24px; }
+    .social-link { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: background .2s, border-color .2s, color .2s; color: rgba(255,255,255,.75); }
+    .social-link:hover { background: var(--oak); border-color: var(--oak); }
+    .footer-col h5 { color: var(--white); font-weight: 600; font-size: .88rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 20px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: .88rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--oak); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: .82rem; }
+
+    /* Lightbox */
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.92); z-index: 4000; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; }
+    .lightbox-close { position: absolute; top: 20px; right: 28px; color: var(--white); font-size: 2.4rem; cursor: pointer; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .craft-grid, .faq-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .craft-img { height: 400px; }
+      .vis-wrap { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .g-large { grid-column: span 12; height: 300px; }
+      .g-med { grid-column: span 12; height: 260px; }
+      .g-sm { grid-column: span 4; height: 220px; }
+      .prod-modal { grid-template-columns: 1fr; }
+      .prod-modal-preview { border-radius: 16px 16px 0 0; min-height: 280px; }
+      .prod-modal-info { max-height: none; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 28px; }
+      .g-sm { grid-column: span 12; height: 220px; }
+      .hero-stats { gap: 28px; }
+    }
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PRODUCT DATA -->
+<script>
+const PHLOOR = 'https://www.phloor.ie/wp-content/uploads/';
+const BEARFOOT = 'https://www.bearfoot.ie';
+const FLATPACKED = 'https://flatpacked.ie/wp-content/uploads/2025/12/';
+
+const PRODUCTS = [
+  {
+    id: "art-floor",
+    name: "Art Floor Elite XL 12mm",
+    category: "Premium 12mm Laminate",
+    filter: "laminate",
+    desc: "12mm AC5-rated wide-plank laminate. 1202\u00d7195mm planks. Underfloor heating compatible. Up to 72hr water resistance.",
+    colours: [
+      {name: "Jawa AXL006", img: "https://flatpacked.ie/wp-content/uploads/2025/12/8.jpeg"},
+      {name: "Tokyo AXL001", img: "https://flatpacked.ie/wp-content/uploads/2025/12/111.jpeg"},
+      {name: "Nairobi AXL005", img: "https://flatpacked.ie/wp-content/uploads/2025/12/4.jpeg"},
+      {name: "Muson AXL003", img: "https://flatpacked.ie/wp-content/uploads/2025/12/1-1.jpeg"},
+      {name: "Mugla AXL", img: "https://flatpacked.ie/wp-content/uploads/2025/12/6.jpeg"},
+      {name: "Devine Mese AXL004", img: "https://flatpacked.ie/wp-content/uploads/2025/12/11.jpeg"},
+      {name: "Poznan AXL012", img: "https://flatpacked.ie/wp-content/uploads/2025/12/1.jpeg"},
+      {name: "Samyeli AX002", img: "https://flatpacked.ie/wp-content/uploads/2025/12/0005206_art-floor-12mm-elite-xl-samyeli-ax002-187m2.jpeg"},
+    ]
+  },
+  {
+    id: "sound-12mm",
+    name: "Sound 12mm",
+    category: "Kronopol 12mm Laminate",
+    filter: "laminate",
+    desc: "Deluxe 12mm AC5 laminate with integrated acoustic underlay. Express Click system with superb 3D wood structures.",
+    colours: [
+      {name: "Blues Chestnut", img: "https://www.bearfoot.ie/assets/floors/kronopol/sound/new-product-details/3342_rzut_z_gory_3_panele_format_A4_big__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Fado Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/sound/new-product-details/3885_rzut_z_gory_3_panele_A4_big__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Opera Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/sound/new-product-details/3884_rzut_z_gory_3_panele_A4_big__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Piano Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/sound/new-product-details/3883_rzut_z_gory_3_panele_A4_big__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Soul Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/sound/new-product-details/3332_rzut_z_gory_3_panele_format_A4_big__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+    ]
+  },
+  {
+    id: "xtreme-long",
+    name: "Xtreme Long 12mm",
+    category: "X-Treme 12mm Laminate",
+    filter: "laminate",
+    desc: "12mm long-plank laminate with wonderful 3D structures in soft, restful tones.",
+    colours: [
+      {name: "Belgian Oak Beige", img: "https://www.bearfoot.ie/assets/floors/x-treme/x-treme/belgian-oak-beige/4__FocusFillWzkyMCw2NjQsIngiLDI4Nl0.jpg"},
+      {name: "Belgian Oak Brown", img: "https://www.bearfoot.ie/assets/floors/x-treme/x-treme/belgian-oak-brown/7__FocusFillWzkyMCw2NjQsIngiLDI4Nl0.jpg"},
+      {name: "Castle Oak Original", img: "https://www.bearfoot.ie/assets/floors/x-treme/x-treme/castle-oak-original/6__FocusFillWzkyMCw2NjQsIngiLDI4Nl0.jpg"},
+    ]
+  },
+  {
+    id: "marine-10mm",
+    name: "Marine 10mm",
+    category: "Kronopol 10mm Laminate",
+    filter: "laminate",
+    desc: "Water-resistant 10mm laminate. Ideal for kitchens, hallways and bathrooms.",
+    colours: [
+      {name: "Adriatic Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/marine/new-product-details/3793_rzut_z_gory_3_panele_A4_big_RGB_net__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Atlantic Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/marine/new-product-details/3788_rzut_z_gory_3_panele_a4_big_rgb__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Baltic Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/marine/new-product-details/3787_rzut_z_gory_3_panele_A4_big_RGB__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Caspian Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/marine/new-product-details/4563_rzut_z_gory_3_panele_A4_big_RGB__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Japanese Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/marine/new-product-details/4564_rzut_z_gory_3_panele_A4_big_RGB__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Pacific Oak", img: "https://www.bearfoot.ie/assets/floors/kronopol/marine/new-product-details/3820_rzut_z_gory_3_panele_A4_big_RGB__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+    ]
+  },
+  {
+    id: "bella-10mm",
+    name: "Bella 10mm",
+    category: "Kronopol 10mm Laminate",
+    filter: "laminate",
+    desc: "Beautiful 10mm laminate with elegant oak designs in soft warm tones.",
+    colours: [
+      {name: "Rita Oak", img: "https://www.bearfoot.ie/assets/laminates/10mm/krono-bella/rita-oak/40614_rzut_z_gory_3_panele_RGB_net__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Carissa Oak", img: "https://www.bearfoot.ie/assets/laminates/10mm/krono-bella/new-product-details/40594_rzut_z_gory_3_panele_RGB_net__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Amelia Oak", img: "https://www.bearfoot.ie/assets/laminates/10mm/krono-bella/new-product-details/40604_rzut_z_gory_3_panele_RGB_net__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Coletta Oak", img: "https://www.bearfoot.ie/assets/laminates/10mm/krono-bella/new-product-details/40624_rzut_z_gory_3_panele_RGB_net__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+      {name: "Alodia Oak", img: "https://www.bearfoot.ie/assets/laminates/10mm/krono-bella/new-product-details/40634_DIY__FocusFillWzkyMCw2NjQsInkiLDEyOF0.jpg"},
+      {name: "Urania Oak", img: "https://www.bearfoot.ie/assets/laminates/10mm/krono-bella/new-product-details/40644_rzut_z_gory_3_panele_big_RGB__FocusFillWzkyMCw2NjQsIngiLDld.jpg"},
+    ]
+  },
+  {
+    id: "aeon",
+    name: "Aeon",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "100% PES action back carpet. 4m width. Heavy domestic use. Stain resistant, bleach cleanable.",
+    colours: [
+      {name: "150 Lion", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-50.jpg"},
+      {name: "169 Polar Bear", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-69.jpg"},
+      {name: "172 Shark", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-72.jpg"},
+      {name: "174 Alpaca", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-74.jpg"},
+      {name: "177 Rhinoceros", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-77.jpg"},
+      {name: "185 Parrot Fish", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-85.jpg"},
+      {name: "325 Burgundy", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-325.jpg"},
+      {name: "340 Olive", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-340.jpg"},
+      {name: "376 Truffle", img: "https://www.phloor.ie/wp-content/uploads/2023/10/aeon-376.jpg"},
+    ]
+  },
+  {
+    id: "alabama",
+    name: "Alabama",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Luxury loop pile with character. 4m width, felt backing.",
+    colours: [
+      {name: "5911 Berber", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5911-berber-200x200.jpg"},
+      {name: "5913 Beige", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5913-beige-200x200.jpg"},
+      {name: "5914 Mink", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5914-mink-200x200.jpg"},
+      {name: "5915 Mocha", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5915-brown_beige-200x200.jpg"},
+      {name: "5916 Brown", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5916-brown-200x200.jpg"},
+      {name: "5919 Bramble", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5919-brown_grey-200x200.jpg"},
+      {name: "5923 Silver", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5923-silver-200x200.jpg"},
+      {name: "5925 Grey", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5925-grey-200x200.jpg"},
+      {name: "5927 Anthracite", img: "https://www.phloor.ie/wp-content/uploads/2023/11/Alabama-5927-anthracite-200x200.jpg"},
+    ]
+  },
+  {
+    id: "allegro",
+    name: "Allegro",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Soft twist pile carpet available in a wide colour palette.",
+    colours: [
+      {name: "40 Fern", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-40.jpg"},
+      {name: "60 Champagne", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-60.jpg"},
+      {name: "72 Suede", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-72.jpg"},
+      {name: "73 Silver", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-73.jpg"},
+      {name: "75 Zircon", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-75.jpg"},
+      {name: "77 Fossil", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-77.jpg"},
+      {name: "82 Azure", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-82.jpg"},
+      {name: "90 Vintage White", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-90.jpg"},
+      {name: "92 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-92.jpg"},
+      {name: "175", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-175.jpg"},
+      {name: "176 Platinum", img: "https://www.phloor.ie/wp-content/uploads/2023/10/alps-176.jpg"},
+    ]
+  },
+  {
+    id: "alpha-elite",
+    name: "Alpha Elite",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Premium soft pile carpet. 11 contemporary colours. Heavy domestic use.",
+    colours: [
+      {name: "101 Silk Dreamer", img: "https://www.phloor.ie/wp-content/uploads/2025/05/101-SILK-DREAMER-200x200.jpg"},
+      {name: "136 Ibiza Blush", img: "https://www.phloor.ie/wp-content/uploads/2025/05/136-IBIZA-BLUSH-200x200.jpg"},
+      {name: "138 Forest Sand", img: "https://www.phloor.ie/wp-content/uploads/2025/05/138-FOREST-SAND-200x200.jpg"},
+      {name: "139 Sensational Sand", img: "https://www.phloor.ie/wp-content/uploads/2025/05/139-SENSATIONAL-SAND-200x200.jpg"},
+      {name: "140 Cool Fez", img: "https://www.phloor.ie/wp-content/uploads/2025/05/140-COOL-FEZ-200x200.jpg"},
+      {name: "142 Limited Latte", img: "https://www.phloor.ie/wp-content/uploads/2025/05/142-LIMITED-LATTE-200x200.jpg"},
+      {name: "190 Mineral Chic", img: "https://www.phloor.ie/wp-content/uploads/2025/05/190-MINERAL-CHIC-200x200.jpg"},
+      {name: "193 Calm Mood", img: "https://www.phloor.ie/wp-content/uploads/2025/05/193-CALM-MOOD-200x200.jpg"},
+      {name: "195 Old Flax", img: "https://www.phloor.ie/wp-content/uploads/2025/05/195-OLD-FLAX-200x200.jpg"},
+      {name: "197 Agate", img: "https://www.phloor.ie/wp-content/uploads/2025/05/197-AGATE-200x200.jpg"},
+      {name: "198 Dark Forest", img: "https://www.phloor.ie/wp-content/uploads/2025/05/198-DARK-FOREST-200x200.jpg"},
+    ]
+  },
+  {
+    id: "alpha-supreme",
+    name: "Alpha Supreme",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Superior soft pile. Extra resilient for heavy use. 11 colours.",
+    colours: [
+      {name: "301 Silk Dreamer", img: "https://www.phloor.ie/wp-content/uploads/2025/05/301-SILK-DREAMER.jpg"},
+      {name: "336 Ibiza Blush", img: "https://www.phloor.ie/wp-content/uploads/2025/05/336-IBIZA-BLUSH.jpg"},
+      {name: "338 Forest Sand", img: "https://www.phloor.ie/wp-content/uploads/2025/05/338-FOREST-SAND.jpg"},
+      {name: "339 Sensational Sand", img: "https://www.phloor.ie/wp-content/uploads/2025/05/339-SENSATIONAL-SAND.jpg"},
+      {name: "340 Cool Fez", img: "https://www.phloor.ie/wp-content/uploads/2025/05/340-COOL-FEZ.jpg"},
+      {name: "342 Limited Latte", img: "https://www.phloor.ie/wp-content/uploads/2025/05/342-LIMITED-LATTE.jpg"},
+      {name: "390 Mineral Chic", img: "https://www.phloor.ie/wp-content/uploads/2025/05/390-MINERAL-CHIC.jpg"},
+      {name: "393 Calm Mood", img: "https://www.phloor.ie/wp-content/uploads/2025/05/393-CALM-MOOD.jpg"},
+      {name: "395 Old Flax", img: "https://www.phloor.ie/wp-content/uploads/2025/05/395-OLD-FLAX.jpg"},
+      {name: "397 Agate", img: "https://www.phloor.ie/wp-content/uploads/2025/05/397-AGATE.jpg"},
+      {name: "398 Dark Forest", img: "https://www.phloor.ie/wp-content/uploads/2025/05/398-DARK-FOREST.jpg"},
+    ]
+  },
+  {
+    id: "arizona",
+    name: "Arizona",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Classic herringbone micro fibre Con X yarn. 4m & 5m widths.",
+    colours: [
+      {name: "6311 Pebble Beach", img: "https://www.phloor.ie/wp-content/uploads/2022/07/andes-berber-6311.jpg"},
+      {name: "6312 Toasted Almond", img: "https://www.phloor.ie/wp-content/uploads/2022/07/andes-light-beige-6312.jpg"},
+      {name: "6316 Barnacle", img: "https://www.phloor.ie/wp-content/uploads/2022/07/andes-greige-6316.jpg"},
+      {name: "6318 Cappuccino", img: "https://www.phloor.ie/wp-content/uploads/2022/07/andes-mink-6318.jpg"},
+      {name: "6321 Goosedown", img: "https://www.phloor.ie/wp-content/uploads/2022/07/andes-ice-6321.jpg"},
+      {name: "6323 Parson Stone", img: "https://www.phloor.ie/wp-content/uploads/2022/07/andes-silver-6323.jpg"},
+      {name: "6325 Grey Door", img: "https://www.phloor.ie/wp-content/uploads/2022/07/andes-grey-6325.jpg"},
+      {name: "6328 Vintage Slate", img: "https://www.phloor.ie/wp-content/uploads/2022/07/andes-anthracite-6328.jpg"},
+    ]
+  },
+  {
+    id: "aurora",
+    name: "Aurora",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Elegant 1/10-gauge fine point twist. 15-year stain warranty. Antistatic, antibacterial. 4m & 5m.",
+    colours: [
+      {name: "03 Silk Dreamer", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_03_hr-scaled.jpg"},
+      {name: "09 Almond White", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_09_hr-scaled.jpg"},
+      {name: "26 Softened Green", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_26_hr-scaled.jpg"},
+      {name: "30 Fluffy Cheetah", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_30_hr-scaled.jpg"},
+      {name: "32 Zanzibar", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_32_hr-scaled.jpg"},
+      {name: "33 Sensational Sand", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_33_hr-scaled.jpg"},
+      {name: "34 Grey Clay", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_34_hr-scaled.jpg"},
+      {name: "35 Elegant Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_35_hr-scaled.jpg"},
+      {name: "38 Porcini", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_38_hr-scaled.jpg"},
+      {name: "76 Denim", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_76_hr-scaled.jpg"},
+      {name: "90 Country White", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_90_hr-scaled.jpg"},
+      {name: "94 Calm Mood", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_94_hr-scaled.jpg"},
+    ]
+  },
+  {
+    id: "aztec",
+    name: "Aztec",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Heavyweight herringbone from natural shades to dramatic anthracite. 4m width.",
+    colours: [
+      {name: "3113 Coir", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Aztec-3113-beige.jpg"},
+      {name: "3115 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Aztec-3115-taupe.jpg"},
+      {name: "3121 Chrome", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Aztec-3121-silver.jpg"},
+      {name: "3122 Greige", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Aztec-3122-greige.jpg"},
+      {name: "3124 Greystoke", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Aztec-3124-grey.jpg"},
+      {name: "3126 Anthracite", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Aztec-3126-anthracite.jpg"},
+      {name: "3128 Silhouette", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Aztec-3128-black-white.jpg"},
+      {name: "3137 French Blue", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Aztec-3137-d-blue.jpg"},
+    ]
+  },
+  {
+    id: "babylon",
+    name: "Babylon",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Rich dense pile in a wide colour palette. Suitable for any room.",
+    colours: [
+      {name: "69 Line White", img: "https://www.phloor.ie/wp-content/uploads/2026/01/69-LINE-WHITE-2.jpg"},
+      {name: "70 Stonewash", img: "https://www.phloor.ie/wp-content/uploads/2026/01/70-STONEWASH.jpg"},
+      {name: "71 Honey Bee", img: "https://www.phloor.ie/wp-content/uploads/2026/01/71-HONEY-BEE.jpg"},
+      {name: "72 Sandstone", img: "https://www.phloor.ie/wp-content/uploads/2026/01/72-SANDSTONE-2.jpg"},
+      {name: "73 Canvas", img: "https://www.phloor.ie/wp-content/uploads/2026/01/73-CANVAS-2.jpg"},
+      {name: "74 Meteorite", img: "https://www.phloor.ie/wp-content/uploads/2026/01/74-METEORITE.jpg"},
+      {name: "76 Quartz", img: "https://www.phloor.ie/wp-content/uploads/2026/01/76-QUARTZ.jpg"},
+      {name: "78 Charcoal", img: "https://www.phloor.ie/wp-content/uploads/2026/01/78-CHARCOAL-2.jpg"},
+      {name: "90 Walnut", img: "https://www.phloor.ie/wp-content/uploads/2026/01/90-WALNUT.jpg"},
+      {name: "41 Myrtle", img: "https://www.phloor.ie/wp-content/uploads/2026/01/41-MYRTLE-2.jpg"},
+    ]
+  },
+  {
+    id: "bellevue",
+    name: "Bellevue",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Classic design carpet. Heavy domestic use. Wide colour range.",
+    colours: [
+      {name: "69 Creme de la Creme", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-69-scaled.jpg"},
+      {name: "71 Hessian", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-71-scaled.jpg"},
+      {name: "72 Biscuit", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-72-scaled.jpg"},
+      {name: "73 Soft White", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-73-scaled.jpg"},
+      {name: "75 Modern Grey", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-75-scaled.jpg"},
+      {name: "77 Antique Silver", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-77-scaled.jpg"},
+      {name: "93 Mink", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-93-scaled.jpg"},
+      {name: "174 Silver Birch", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-174-scaled.jpg"},
+      {name: "175 Mayfair White", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-175-scaled.jpg"},
+      {name: "176 Vintage White", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-176-scaled.jpg"},
+      {name: "177 Moleskin", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELLEVUE-177-scaled.jpg"},
+    ]
+  },
+  {
+    id: "belmont",
+    name: "Belmont",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Twist pile carpet in neutral tones. Available in 11 colours.",
+    colours: [
+      {name: "70 Oatmeal", img: "https://www.phloor.ie/wp-content/uploads/2024/09/BELMONT-70.jpg"},
+      {name: "74 Pencil Lead", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-74.jpg"},
+      {name: "76 Granite", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-76.jpg"},
+      {name: "90 Bramble", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-90.jpg"},
+      {name: "92 Choca-Mocha", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-92.jpg"},
+      {name: "173 Ecru", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-173.jpg"},
+      {name: "175 Greige", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-175.jpg"},
+      {name: "274 Tungsten", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-274.jpg"},
+      {name: "275 Steel", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-275.jpg"},
+      {name: "276 Bluejay", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-276.jpg"},
+      {name: "277 Midnight Cowboy", img: "https://www.phloor.ie/wp-content/uploads/2024/09/belmont-277.jpg"},
+    ]
+  },
+  {
+    id: "bomonti",
+    name: "Bomonti",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Contemporary style carpet. 11 colours.",
+    colours: [
+      {name: "61 Canvas", img: "https://www.phloor.ie/wp-content/uploads/2025/01/61-CANVAS-scaled.jpeg"},
+      {name: "70 Oatmeal", img: "https://www.phloor.ie/wp-content/uploads/2025/01/70-OATMEAL-scaled.jpeg"},
+      {name: "71 Mushroom", img: "https://www.phloor.ie/wp-content/uploads/2025/01/71-MUSHROOM-scaled.jpeg"},
+      {name: "72 Stone", img: "https://www.phloor.ie/wp-content/uploads/2025/01/72-STONE-scaled.jpeg"},
+      {name: "76 Moleskin", img: "https://www.phloor.ie/wp-content/uploads/2025/01/76-MOLESKIN.jpeg"},
+      {name: "77 Smoked Ember", img: "https://www.phloor.ie/wp-content/uploads/2025/01/77-SMOKED-EMBER.jpeg"},
+      {name: "80 Wolfhound", img: "https://www.phloor.ie/wp-content/uploads/2025/01/80-WOLFHOUND.jpeg"},
+      {name: "81 Heron", img: "https://www.phloor.ie/wp-content/uploads/2025/01/81-HERON-scaled.jpeg"},
+      {name: "82 Marble", img: "https://www.phloor.ie/wp-content/uploads/2025/01/82-MARBLE-scaled.jpeg"},
+      {name: "90 Harvest", img: "https://www.phloor.ie/wp-content/uploads/2025/01/90-HARVEST-scaled.jpeg"},
+      {name: "91 Heather", img: "https://www.phloor.ie/wp-content/uploads/2025/01/91-HEATHER-scaled.jpeg"},
+    ]
+  },
+  {
+    id: "bonanza",
+    name: "Bonanza",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Graphic design heather loop pile. 4m width, felt backing.",
+    colours: [
+      {name: "114 DK Beige", img: "https://www.phloor.ie/wp-content/uploads/2020/09/114_D.Beige-0114-200x200.jpg"},
+      {name: "118 Cognac", img: "https://www.phloor.ie/wp-content/uploads/2020/09/118_Cognac_0118-200x200.jpg"},
+      {name: "119 Brown", img: "https://www.phloor.ie/wp-content/uploads/2020/09/119_Brown_0119-200x200.jpg"},
+      {name: "122 Silver", img: "https://www.phloor.ie/wp-content/uploads/2020/09/122_Silver_0122-200x200.jpg"},
+      {name: "123 Grey Beige", img: "https://www.phloor.ie/wp-content/uploads/2020/09/123_GreyBeige_0123-200x200.jpg"},
+      {name: "126 Grey", img: "https://www.phloor.ie/wp-content/uploads/2020/09/126_Grey_0126-200x200.jpg"},
+      {name: "128 Anthracite", img: "https://www.phloor.ie/wp-content/uploads/2020/09/128_Anthracite_0128-200x200.jpg"},
+    ]
+  },
+  {
+    id: "caress",
+    name: "Caress",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Soft comfortable pile. Stain resistant. 10 colours.",
+    colours: [
+      {name: "170 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2020/09/manilla-170.jpg"},
+      {name: "176 Spanish Silver", img: "https://www.phloor.ie/wp-content/uploads/2020/09/manilla-176.jpg"},
+      {name: "275 Periwinkle", img: "https://www.phloor.ie/wp-content/uploads/2020/09/manilla-75.jpg"},
+      {name: "277 Slate", img: "https://www.phloor.ie/wp-content/uploads/2020/09/manilla-77.jpg"},
+      {name: "672 Limestone", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Caress-672.jpg"},
+      {name: "673 Wolfhound", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Caress-673.jpg"},
+      {name: "674 French White", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Caress-674.jpg"},
+      {name: "677 Basalt", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Caress-677.jpg"},
+      {name: "693 Mushroom", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Caress-693.jpg"},
+      {name: "694 Oyster Beige", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Caress-694.jpg"},
+    ]
+  },
+  {
+    id: "caress-luxury",
+    name: "Caress Luxury",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Luxury version of Caress with enhanced pile depth. 7 colours.",
+    colours: [
+      {name: "70 Sandstone", img: "https://www.phloor.ie/wp-content/uploads/2026/04/CARESS-LUXURY-70.jpg"},
+      {name: "71 Biscuit", img: "https://www.phloor.ie/wp-content/uploads/2026/04/CARESS-LUXURY-71.jpg"},
+      {name: "72 Coffee", img: "https://www.phloor.ie/wp-content/uploads/2026/04/CARESS-LUXURY-72.jpg"},
+      {name: "75 Pebbles", img: "https://www.phloor.ie/wp-content/uploads/2026/04/CARESS-LUXURY-75.jpg"},
+      {name: "77 Basalt", img: "https://www.phloor.ie/wp-content/uploads/2026/04/CARESS-LUXURY-77.jpg"},
+      {name: "90 Mushroom", img: "https://www.phloor.ie/wp-content/uploads/2026/04/CARESS-LUXURY-90.jpg"},
+      {name: "173 Stone", img: "https://www.phloor.ie/wp-content/uploads/2026/04/CARESS-LUXURY-173.jpg"},
+    ]
+  },
+  {
+    id: "carrig",
+    name: "Carrig",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Irish-inspired loop pile carpet. 9 colours.",
+    colours: [
+      {name: "1208 Coffee Cream", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1208.jpg"},
+      {name: "1209 Canvas", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1209.jpg"},
+      {name: "1211 Berber", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1211.jpg"},
+      {name: "1212 Camel", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1212.jpg"},
+      {name: "1215 Mink", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1215.jpg"},
+      {name: "1217 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1217.jpg"},
+      {name: "1282 Oatmeal", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1282.jpg"},
+      {name: "1284 Harvest", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1284.jpg"},
+      {name: "1287 Nutmeg", img: "https://www.phloor.ie/wp-content/uploads/2026/01/Lewis-1287.jpg"},
+    ]
+  },
+  {
+    id: "casa-la-moda",
+    name: "Casa La Moda",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Fashion-forward carpet. Bleach cleanable, stain resistant. Underfloor heating compatible.",
+    colours: [
+      {name: "569 Sea Salt", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-569.jpg"},
+      {name: "570 Elmwood", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-570.jpg"},
+      {name: "571 Antique White", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-671.jpg"},
+      {name: "572 Gentle Cream", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-672.jpg"},
+      {name: "573 Comfort Zone", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-673.jpg"},
+      {name: "590 Caramel", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-690.jpg"},
+      {name: "591 Sandcastle", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-591.jpg"},
+      {name: "594 Truffle", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-594.jpg"},
+      {name: "595 Mocha", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-595.jpg"},
+    ]
+  },
+  {
+    id: "chilli",
+    name: "Chilli",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "100% PP loop pile. 4m width, felt backing. 9 colours.",
+    colours: [
+      {name: "2013 Berber", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chile-berber-2013-200x200.jpg"},
+      {name: "2016 Camel", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chile-beige-brown-2016-200x200.jpg"},
+      {name: "2022 Silver", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chile-silver-2022-200x200.jpg"},
+      {name: "2023 Greige", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chili-grey-beige-2023-200x200.jpg"},
+      {name: "2025 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chile-taupe-2025-200x200.jpg"},
+      {name: "2026 Grey", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chili-grey-2-2026-1-200x200.jpg"},
+      {name: "2027 Anthracite", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chili-anthracite-2027-200x200.jpg"},
+      {name: "2028 B&W", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chili-black-white-2028-200x200.jpg"},
+      {name: "2037 Navy", img: "https://www.phloor.ie/wp-content/uploads/2023/07/chile-navy-white-2037-200x200.jpg"},
+    ]
+  },
+  {
+    id: "cleveland",
+    name: "Cleveland Broadloom",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Commercial-grade broadloom. 4m width. 5 colours.",
+    colours: [
+      {name: "71", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30571.jpg"},
+      {name: "74", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30574.jpg"},
+      {name: "75", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30575.jpg"},
+      {name: "76", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30676.jpg"},
+      {name: "83", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30683.jpg"},
+    ]
+  },
+  {
+    id: "country-style",
+    name: "Country Style",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Herringbone and berber design carpet. 18 colours across two patterns.",
+    colours: [
+      {name: "5111 Herringbone Ivory", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5111-HERRINGBONE-IVORY-scaled.jpeg"},
+      {name: "5112 Herringbone Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5112-HERRINGBONE-CASHMERE-scaled.jpeg"},
+      {name: "5114 Herringbone Camel", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5114-HERRINGBONE-CAMEL-scaled.jpeg"},
+      {name: "5116 Herringbone Taupe", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5116-HERRINGBONE-TAUPE-scaled.jpeg"},
+      {name: "5118 Herringbone Truffle", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5118-HERRINGBONE-TRUFFLE-scaled.jpeg"},
+      {name: "5121 Herringbone Sandstone", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5121-HERRINGBONE-SANDSTONE-scaled.jpeg"},
+      {name: "5122 Herringbone Merlin", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5122-HERRINGBONE-MERLIN-scaled.jpeg"},
+      {name: "5123 Herringbone Greige", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5123-HERRINGBONE-GREIGE-scaled.jpeg"},
+      {name: "5124 Herringbone Slate", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5124-HERRINGBONE-SLATE-scaled.jpeg"},
+      {name: "5211 Berber Ivory", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5211-BERBER-IVORY-scaled.jpeg"},
+      {name: "5212 Berber Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5212-BERBER-CASHMERE-scaled.jpeg"},
+      {name: "5214 Berber Camel", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5214-BERBER-CAMEL-scaled.jpeg"},
+      {name: "5216 Berber Taupe", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5216-BERBER-TAUPE.jpeg"},
+      {name: "5218 Berber Truffle", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5218-BERBER-TRUFFLE-scaled.jpeg"},
+      {name: "5221 Berber Sandstone", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5221-BERBER-SANDSTONE-scaled.jpeg"},
+      {name: "5222 Berber Merlin", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5222-BERBER-MERLIN-scaled.jpeg"},
+      {name: "5223 Berber Greige", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5223-BERBER-GREIGE-scaled.jpeg"},
+      {name: "5224 Berber Slate", img: "https://www.phloor.ie/wp-content/uploads/2025/01/5224-BERBER-SLATE.jpeg"},
+    ]
+  },
+  {
+    id: "daytona",
+    name: "Daytona",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Practical durable loop pile. 9 colours.",
+    colours: [
+      {name: "13 Light Beige", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-lbeige-7613-200x200.jpg"},
+      {name: "14 Dark Beige", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-dbeige-7614-200x200.jpg"},
+      {name: "16 Mink", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-mink-7616-200x200.jpg"},
+      {name: "18 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-taupe-7618-200x200.jpg"},
+      {name: "22 Grey Beige", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-grey-beige-7622-200x200.jpg"},
+      {name: "23 Silver", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-silver-7623-200x200.jpg"},
+      {name: "24 Grey", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-grey-7624-200x200.jpg"},
+      {name: "25 Anthracite", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-anthraciet-7625-200x200.jpg"},
+      {name: "28 Charcoal", img: "https://www.phloor.ie/wp-content/uploads/2023/04/daytona-charcoal-7628-200x200.jpg"},
+    ]
+  },
+  {
+    id: "derby",
+    name: "Derby",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Loop pile. Stain resistant for family homes. 7 colours.",
+    colours: [
+      {name: "4811 L Beige", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Deby-4811.jpg"},
+      {name: "4812 Mink", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Derby-4812.jpg"},
+      {name: "4814 Stone", img: "https://www.phloor.ie/wp-content/uploads/2020/09/4814-Stone-4814.jpg"},
+      {name: "4817 Brown", img: "https://www.phloor.ie/wp-content/uploads/2020/09/4817-Brown-4817.jpg"},
+      {name: "4821 L Grey", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Derby-4821.jpg"},
+      {name: "4823 Grey", img: "https://www.phloor.ie/wp-content/uploads/2020/09/4823-Grey-4823.jpg"},
+      {name: "4828 Anthracite", img: "https://www.phloor.ie/wp-content/uploads/2020/09/4828-Anthracite-4828.jpg"},
+    ]
+  },
+  {
+    id: "desire-by-lano",
+    name: "Desire by Lano",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Award-winning designer carpet. 14 colours.",
+    colours: [
+      {name: "130 Rose", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-130-ROSE-scaled.jpg"},
+      {name: "231 Flax", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-231-FLAX-scaled.jpg"},
+      {name: "240 Cream", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-240-CREAM-scaled.jpg"},
+      {name: "440 Ivory", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-440-IVORY-scaled.jpg"},
+      {name: "450 Sand", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-450-SAND-scaled.jpg"},
+      {name: "460 Hemp", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-460-HEMP-scaled.jpg"},
+      {name: "490 Stone Path", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-490-STONE-PATH-scaled.jpg"},
+      {name: "780 Steel", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-780-STEEL-scaled.jpg"},
+      {name: "790 Midnight", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-790-MIDNIGHT-scaled.jpg"},
+      {name: "801 Ebony", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-801-EBONY-scaled.jpg"},
+      {name: "820 Slate", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-820-SLATE-scaled.jpg"},
+      {name: "850 Moonbeam", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-850-MOONBEAM-scaled.jpg"},
+      {name: "860 Granite", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-860-GRANITE-scaled.jpg"},
+      {name: "890 Snow", img: "https://www.phloor.ie/wp-content/uploads/2024/09/DESIRE-BY-LANO-890-SNOW-scaled.jpg"},
+    ]
+  },
+  {
+    id: "easy-living",
+    name: "Easy Living",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Practical easy-clean carpet for everyday life. 11 colours.",
+    colours: [
+      {name: "34 Nutmeg", img: "https://www.phloor.ie/wp-content/uploads/2025/05/34-Nutmeg-scaled.jpg"},
+      {name: "37 Chestnut", img: "https://www.phloor.ie/wp-content/uploads/2025/05/37-Chestnut-scaled.jpg"},
+      {name: "39 Greige", img: "https://www.phloor.ie/wp-content/uploads/2025/05/39-Greige-scaled.jpg"},
+      {name: "42 Cocoa", img: "https://www.phloor.ie/wp-content/uploads/2025/05/42-Cocoa-scaled.jpg"},
+      {name: "49 Stone", img: "https://www.phloor.ie/wp-content/uploads/2025/05/49-Stone-scaled.jpg"},
+      {name: "79 Granite", img: "https://www.phloor.ie/wp-content/uploads/2025/05/79-Granite-scaled.jpg"},
+      {name: "93 Greywood", img: "https://www.phloor.ie/wp-content/uploads/2025/05/93-Greywood-scaled.jpg"},
+      {name: "95 Steel", img: "https://www.phloor.ie/wp-content/uploads/2025/05/95-Steel-scaled.jpg"},
+      {name: "96 Smokin Ember", img: "https://www.phloor.ie/wp-content/uploads/2025/05/96-Smokin-ember-scaled.jpg"},
+      {name: "99 Basalt", img: "https://www.phloor.ie/wp-content/uploads/2025/05/99-Basalt-scaled.jpg"},
+    ]
+  },
+  {
+    id: "elite",
+    name: "Elite",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Commercial-grade carpet tiles. 18 colours. Mix and match or replace individually.",
+    colours: [
+      {name: "70 Sand", img: "https://www.phloor.ie/wp-content/uploads/2020/09/70-sand-scaled.jpg"},
+      {name: "72 Stone", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-72.jpg"},
+      {name: "73 Silver", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-73.jpg"},
+      {name: "74 Shadow", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-74.jpg"},
+      {name: "75 Pebbles", img: "https://www.phloor.ie/wp-content/uploads/2020/09/alicante-75.jpg"},
+      {name: "76 Pewter", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-76.jpg"},
+      {name: "77 Slate", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-77.jpg"},
+      {name: "78 Twilight", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-78.jpg"},
+      {name: "90 Camel", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-90.jpg"},
+      {name: "91 Biscuit", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-91.jpg"},
+      {name: "93 Mushroom", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-93.jpg"},
+      {name: "173 Hemp", img: "https://www.phloor.ie/wp-content/uploads/2020/09/173-hemp-scaled.jpg"},
+      {name: "174 Steel", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-174.jpg"},
+      {name: "175 Dove Grey", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-175.jpg"},
+      {name: "176 Granite", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-176.jpg"},
+      {name: "177 Azure", img: "https://www.phloor.ie/wp-content/uploads/2020/09/001-alicante-177.jpg"},
+      {name: "190 Bramble", img: "https://www.phloor.ie/wp-content/uploads/2020/09/190-bramble-scaled.jpg"},
+    ]
+  },
+  {
+    id: "eminence",
+    name: "Eminence",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "12 sophisticated heather shades. 4m & 5m widths. Stain-resistant yarn.",
+    colours: [
+      {name: "74 Onyx", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-74-200x200.jpg"},
+      {name: "75 Shadow", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-75-200x200.jpg"},
+      {name: "76 Sterling Silver", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-76-200x200.jpg"},
+      {name: "90 Parchment", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-90-200x200.jpg"},
+      {name: "174 Nimbus", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-174-200x200.jpg"},
+      {name: "175 Cloudy Bay", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-175-200x200.jpg"},
+      {name: "274 Sable", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-274-200x200.jpg"},
+      {name: "275 Nickle", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-275-200x200.jpg"},
+      {name: "375 Granite", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-375-200x200.jpg"},
+      {name: "376 Charcoal", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-376-200x200.jpg"},
+      {name: "390 Sandalwood", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacramento-classic-390-200x200.jpg"},
+      {name: "73 Walnut", img: "https://www.phloor.ie/wp-content/uploads/2024/01/sacrametno-classic-73-200x200.jpg"},
+    ]
+  },
+  {
+    id: "everest",
+    name: "Everest",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Hardwearing durable carpet. 4m width, felt backing. 8 colours.",
+    colours: [
+      {name: "172 Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-172.jpg"},
+      {name: "242 Aspen", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-242.jpg"},
+      {name: "272 Nutmeg", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-72.jpg"},
+      {name: "273 Mushroom", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-673-1.jpg"},
+      {name: "275 Pebbles", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-175-1.jpg"},
+      {name: "276 Spanish Silver", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-76-1.jpg"},
+      {name: "278 Basalt", img: "https://www.phloor.ie/wp-content/uploads/2026/02/278.jpeg"},
+      {name: "372 Oatmeal", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Packshot-272.jpg"},
+    ]
+  },
+  {
+    id: "finepoint",
+    name: "Finepoint Dimensions",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Fine-gauge twist pile carpet. Gemstone-inspired colour names. 14 colours.",
+    colours: [
+      {name: "25 Garnet", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-25-1.jpg"},
+      {name: "42 Aquamarine", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-42-1.jpg"},
+      {name: "51 Topaz", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-51-1.jpg"},
+      {name: "70 Fossil", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-70-1.jpg"},
+      {name: "72 Oakwood", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-72-1.jpg"},
+      {name: "73 Stone", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-73-1.jpg"},
+      {name: "74 Pebble", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-74-1.jpg"},
+      {name: "75 Slate", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-75-1.jpg"},
+      {name: "77 Tourmaline", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-77-1.jpg"},
+      {name: "78 Sea Pearl", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-78-1.jpg"},
+      {name: "79 Basalt", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-79-1.jpg"},
+      {name: "80 Tanzanite", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-80-1.jpg"},
+      {name: "174 Granite", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-174-1.jpg"},
+      {name: "176 Agate", img: "https://www.phloor.ie/wp-content/uploads/2024/05/dorset-176-1.jpg"},
+    ]
+  },
+  {
+    id: "glen-loop",
+    name: "Glen Loop 100% Wool",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Pure wool loop pile. Naturally fire-retardant, hypoallergenic. 6 colours.",
+    colours: [
+      {name: "174 Ash", img: "https://www.phloor.ie/wp-content/uploads/2022/11/174-Ash.jpg"},
+      {name: "274 Oatmeal", img: "https://www.phloor.ie/wp-content/uploads/2022/11/274-Oatmeal.jpg"},
+      {name: "275 Tungsten", img: "https://www.phloor.ie/wp-content/uploads/2022/11/275-Tungsten.jpg"},
+      {name: "276 Coir", img: "https://www.phloor.ie/wp-content/uploads/2022/11/276-Coir.jpg"},
+      {name: "278 Rattan", img: "https://www.phloor.ie/wp-content/uploads/2022/11/278-Rattan.jpg"},
+      {name: "292 Harvest", img: "https://www.phloor.ie/wp-content/uploads/2022/11/292-Harvest.jpg"},
+    ]
+  },
+  {
+    id: "hercules",
+    name: "Hercules",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Extra-durable loop pile for heavy-traffic areas. 11 colours.",
+    colours: [
+      {name: "1413 Berber", img: "https://www.phloor.ie/wp-content/uploads/2019/08/1413-Berber-1413-200x200.jpg"},
+      {name: "1414 Mink", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Hercules-1414-200x200.jpg"},
+      {name: "1415 Russet", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Hercules-1415-200x200.jpg"},
+      {name: "1418 Cognac", img: "https://www.phloor.ie/wp-content/uploads/2019/08/1418-Cognac-1418-200x200.jpg"},
+      {name: "1423 Greige", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Hercules-1423-200x200.jpg"},
+      {name: "1425 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2019/08/1425-Taupe-1425-200x200.jpg"},
+      {name: "1426 Grey", img: "https://www.phloor.ie/wp-content/uploads/2019/08/1426-Grey-1426-200x200.jpg"},
+      {name: "1427 Graphite", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Hercules-1427-200x200.jpg"},
+      {name: "1435 Blue", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Titan-1435-Blue-1435-200x200.jpg"},
+      {name: "1446 Green", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Titan-1446-Green-1446-200x200.jpg"},
+      {name: "1458 Copper", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Titan-1458-Red-1458-200x200.jpg"},
+    ]
+  },
+  {
+    id: "icon",
+    name: "Icon",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Distinctive design carpet. 4 colours.",
+    colours: [
+      {name: "76", img: "https://www.phloor.ie/wp-content/uploads/2024/09/ICON-76-200x200.jpg"},
+      {name: "92", img: "https://www.phloor.ie/wp-content/uploads/2024/09/ICON-92-200x200.jpg"},
+      {name: "94", img: "https://www.phloor.ie/wp-content/uploads/2024/09/ICON-94-200x200.jpg"},
+      {name: "178", img: "https://www.phloor.ie/wp-content/uploads/2024/09/ICON-178-200x200.jpg"},
+    ]
+  },
+  {
+    id: "inishown",
+    name: "Inishown 100% Wool",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Pure Irish wool carpet. Earthy natural tones. 4 colours.",
+    colours: [
+      {name: "174 Cotton", img: "https://www.phloor.ie/wp-content/uploads/2022/11/174-Cotton.jpg"},
+      {name: "274 Hessian", img: "https://www.phloor.ie/wp-content/uploads/2022/11/274-Hessian.jpg"},
+      {name: "275 Hemp", img: "https://www.phloor.ie/wp-content/uploads/2022/11/275-Hemp.jpg"},
+      {name: "276 Flax", img: "https://www.phloor.ie/wp-content/uploads/2022/11/276-Flax.jpg"},
+    ]
+  },
+  {
+    id: "jamaica",
+    name: "Jamaica",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Contemporary colours combining new fashion shades. 18 colours.",
+    colours: [
+      {name: "113 Strawberry Whip", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-13.jpg"},
+      {name: "150 Spiced Ocre", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-50.jpg"},
+      {name: "169 Piano Key", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-69.jpg"},
+      {name: "171 Swiss Coffee", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-71.jpg"},
+      {name: "172 Vintage Gold", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-72.jpg"},
+      {name: "173 Pavillion Grey", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-73.jpg"},
+      {name: "174 Parsons Stone", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-74.jpg"},
+      {name: "175 Grey Owl", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-75.jpg"},
+      {name: "176 Old Bond Street", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-76.jpg"},
+      {name: "177 Pencil Lead", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-77.jpg"},
+      {name: "178 Inkwell", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-78.jpg"},
+      {name: "179 Porcino", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-79.jpg"},
+      {name: "181 Ormonde Blue", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-81.jpg"},
+      {name: "182 Rich Cobalt", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-82.jpg"},
+      {name: "183 Dragon Fly", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-83.jpg"},
+      {name: "240 Grolive", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-240.jpg"},
+      {name: "273 Soft Putty", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-273.jpg"},
+      {name: "274 Luxurious Mink", img: "https://www.phloor.ie/wp-content/uploads/2024/01/jamaica-274.jpg"},
+    ]
+  },
+  {
+    id: "java",
+    name: "Java",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Visually stunning chevron flatweave. 4m & 5m widths, felt backing. 9 colours.",
+    colours: [
+      {name: "712 Jive", img: "https://www.phloor.ie/wp-content/uploads/2024/07/ceylon-light-beige-712.jpg"},
+      {name: "715 Twine", img: "https://www.phloor.ie/wp-content/uploads/2024/07/ceylon-dark-beige-715.jpg"},
+      {name: "810 Chalk", img: "https://www.phloor.ie/wp-content/uploads/2024/07/java-ivoor-810.jpg"},
+      {name: "812 Sisal", img: "https://www.phloor.ie/wp-content/uploads/2024/07/java-light-beige-812.jpg"},
+      {name: "814 Stone", img: "https://www.phloor.ie/wp-content/uploads/2024/07/java-taupe-814.jpg"},
+      {name: "815 Jute", img: "https://www.phloor.ie/wp-content/uploads/2024/07/java-dark-beige-815.jpg"},
+      {name: "816 Chromium", img: "https://www.phloor.ie/wp-content/uploads/2024/07/java-grey-beige-816.jpg"},
+      {name: "827 Carbon", img: "https://www.phloor.ie/wp-content/uploads/2024/07/java-anthracite-827.jpg"},
+      {name: "884 Tonga", img: "https://www.phloor.ie/wp-content/uploads/2024/07/java-wheat-884.jpg"},
+    ]
+  },
+  {
+    id: "kesari",
+    name: "Kesari",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Designer patterned carpet. 9 colours.",
+    colours: [
+      {name: "620 Ivory", img: "https://www.phloor.ie/wp-content/uploads/2019/08/kesari620.jpg"},
+      {name: "640 Ice Cascade", img: "https://www.phloor.ie/wp-content/uploads/2019/08/kesari640.jpg"},
+      {name: "680 Desert Sand", img: "https://www.phloor.ie/wp-content/uploads/2019/08/kesari680.jpg"},
+      {name: "910 Luxe Grey", img: "https://www.phloor.ie/wp-content/uploads/2022/05/Kesari-910-Luxe-Grey.jpg"},
+      {name: "930 Quick Silver", img: "https://www.phloor.ie/wp-content/uploads/2019/08/kesari930.jpg"},
+      {name: "940 Storm", img: "https://www.phloor.ie/wp-content/uploads/2019/08/kesari940.jpg"},
+      {name: "950 Persian Cat", img: "https://www.phloor.ie/wp-content/uploads/2019/08/kesari950.jpg"},
+      {name: "960 Natural Slate", img: "https://www.phloor.ie/wp-content/uploads/2019/08/kesari960.jpg"},
+      {name: "970 Indian Ink", img: "https://www.phloor.ie/wp-content/uploads/2022/05/Kesari-970-Indian-Ink.jpg"},
+    ]
+  },
+  {
+    id: "lasting-memories-dl",
+    name: "Lasting Memories De Luxe",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Exceptionally soft luxury carpet. 1500g duo backing. Underfloor heating compatible.",
+    colours: [
+      {name: "342 Tiffany", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-42-scaled.jpeg"},
+      {name: "364 Merino", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-64-scaled.jpeg"},
+      {name: "368 Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-68-scaled.jpeg"},
+      {name: "369 Angora", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-69-scaled.jpeg"},
+      {name: "370 Celeste", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-70-scaled.jpeg"},
+      {name: "372 Alpaca", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-72-scaled.jpeg"},
+      {name: "374 Pavillion Grey", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-74-scaled.jpg"},
+      {name: "376 French Grey", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-76-scaled.jpeg"},
+      {name: "378 Serpentine", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-78-scaled.jpg"},
+    ]
+  },
+  {
+    id: "lasting-memories-sup",
+    name: "Lasting Memories Supreme",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Supreme comfort pile. 1500g duo backing. Underfloor heating compatible.",
+    colours: [
+      {name: "342 Tiffany", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-42-scaled.jpeg"},
+      {name: "364 Merino", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-64-scaled.jpeg"},
+      {name: "368 Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-68-scaled.jpeg"},
+      {name: "369 Angora", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-69-scaled.jpeg"},
+      {name: "370 Celeste", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-70-scaled.jpeg"},
+      {name: "372 Alpaca", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-72-scaled.jpeg"},
+      {name: "374 Pavillion Grey", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-74-scaled.jpg"},
+      {name: "376 French Grey", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-76-scaled.jpeg"},
+      {name: "378 Serpentine", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lasting-Memories-78-scaled.jpg"},
+    ]
+  },
+  {
+    id: "magical-feeling",
+    name: "Magical Feeling",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Ultra-soft twist pile. Available in 4m & 5m. 14 colours.",
+    colours: [
+      {name: "Tidewater 320", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Tidewater-320-200x200.jpg"},
+      {name: "Hinting Blue 330", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Hinting-Blue-330-200x200.jpg"},
+      {name: "White Ivory 600", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-White-Ivory-600-200x200.jpg"},
+      {name: "Arcade White 605", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Arcade-White-605-200x200.jpg"},
+      {name: "Ibis White 620", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Ibis-White-620-200x200.jpg"},
+      {name: "Delicate White 640", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Delicate-Touch-640-200x200.jpg"},
+      {name: "Muffin Delight 660", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Muffin-White-660-200x200.jpg"},
+      {name: "Furry Beige 680", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Furry-Beige-680-200x200.jpg"},
+      {name: "Camel Coat 780", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Camel-Coat-780-200x200.jpg"},
+      {name: "Warm Mocca 800", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Warm-Mocca-800-200x200.jpg"},
+      {name: "Jute Brown 820", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Jute-Brown-820-200x200.jpg"},
+      {name: "After Rain 920", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-After-Rain-920-200x200.jpg"},
+      {name: "Icelandic 930", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Icelandic-930-200x200.jpg"},
+      {name: "Shadowland 980", img: "https://www.phloor.ie/wp-content/uploads/2026/04/MF-Shadowland-980-200x200.jpg"},
+    ]
+  },
+  {
+    id: "malta",
+    name: "Malta",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Versatile loop pile carpet. 13 colours.",
+    colours: [
+      {name: "215 Aubergine", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228215.jpg"},
+      {name: "220 Crimson", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228220.jpg"},
+      {name: "240 Sherwood", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228240.jpg"},
+      {name: "269 Sandstone", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228269.jpg"},
+      {name: "271 Oatmeal", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228271.jpg"},
+      {name: "274 Smoke", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228274.jpg"},
+      {name: "276 Quartz", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228276.jpg"},
+      {name: "277 Black Pepper", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228277.jpg"},
+      {name: "278 Basalt", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228278.jpg"},
+      {name: "282 Marine", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228282.jpg"},
+      {name: "285 Ocean", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228285.jpg"},
+      {name: "290 Nutmeg", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228290.jpg"},
+      {name: "297 Bramble", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON228297.jpg"},
+    ]
+  },
+  {
+    id: "modena",
+    name: "Modena",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Contemporary soft pile carpet. 10 colours.",
+    colours: [
+      {name: "53", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-53.jpg"},
+      {name: "73", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-73.jpg"},
+      {name: "75", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-75.jpg"},
+      {name: "76", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-76.jpg"},
+      {name: "77", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-77.jpg"},
+      {name: "78", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-78.jpg"},
+      {name: "80", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-80.jpg"},
+      {name: "91", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-91.jpg"},
+      {name: "92", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-92.jpg"},
+      {name: "94", img: "https://www.phloor.ie/wp-content/uploads/2025/01/Packshot-94.jpg"},
+    ]
+  },
+  {
+    id: "montana",
+    name: "Montana",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Berber-style loop pile. Natural textured look. 9 colours.",
+    colours: [
+      {name: "71 Creme Caramel", img: "https://www.phloor.ie/wp-content/uploads/2024/11/71-French-white-1-200x200.jpg"},
+      {name: "85 Denim", img: "https://www.phloor.ie/wp-content/uploads/2024/11/85-Bluebell-1-200x200.jpg"},
+      {name: "90 Nutmeg", img: "https://www.phloor.ie/wp-content/uploads/2024/11/90-Wild-mink-1-200x200.jpg"},
+      {name: "91 Cinnamon", img: "https://www.phloor.ie/wp-content/uploads/2024/11/91-Sandstone-1-200x200.jpg"},
+      {name: "171 Saffron", img: "https://www.phloor.ie/wp-content/uploads/2024/11/171-Cornflour-1-200x200.jpg"},
+      {name: "174 Mist", img: "https://www.phloor.ie/wp-content/uploads/2024/11/174-Porcelain-1-200x200.jpg"},
+      {name: "175 Greige", img: "https://www.phloor.ie/wp-content/uploads/2024/11/175-Sable-1-200x200.jpg"},
+      {name: "275 Tungsten", img: "https://www.phloor.ie/wp-content/uploads/2024/11/275-Wolfhound-1-200x200.jpg"},
+      {name: "979 Slate", img: "https://www.phloor.ie/wp-content/uploads/2024/11/979-Slate-1-200x200.jpg"},
+    ]
+  },
+  {
+    id: "natural-dimensions",
+    name: "Natural Dimensions",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Natural fibres, sustainable choice. 17 colours.",
+    colours: [
+      {name: "20 Lady Bug", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-20-200x200.jpg"},
+      {name: "41 Eau De Nil", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-41-200x200.jpg"},
+      {name: "45 Herb Garden", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-45-200x200.jpg"},
+      {name: "59 Buttercup", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-59-200x200.jpg"},
+      {name: "72 Mushroom", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-72-200x200.jpg"},
+      {name: "73 Coffee Toffee", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-73-200x200.jpg"},
+      {name: "74 Silverfox", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-74-200x200.jpg"},
+      {name: "75 Greige", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-75-200x200.jpg"},
+      {name: "76 Chelsea Grey", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-76-200x200.jpg"},
+      {name: "77 Stonnington", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-77-200x200.jpg"},
+      {name: "78 Iron Mountain", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-78-200x200.jpg"},
+      {name: "80 Sea Storm", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-80-200x200.jpg"},
+      {name: "92 Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-92-200x200.jpg"},
+      {name: "94 Truffle", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-94-200x200.jpg"},
+      {name: "95 Nutmeg", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-95-200x200.jpg"},
+      {name: "97 Russet", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-97-200x200.jpg"},
+      {name: "176 Pencil Lead", img: "https://www.phloor.ie/wp-content/uploads/2023/11/snowdonia-176-200x200.jpg"},
+    ]
+  },
+  {
+    id: "noble-dreams",
+    name: "Noble Dreams",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Classic pastel shades. Felt and action back. 4m & 5m. 12 colours.",
+    colours: [
+      {name: "12 Pink Linen", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-12-Pink-Linen.jpg"},
+      {name: "32 Blue Dolphin", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-32-Blue-Dolphin.jpg"},
+      {name: "36 Serene Sea", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-36-Serene-Sea.jpg"},
+      {name: "42 Scandinavian Sky", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-42-Scandinavian-Sky.jpg"},
+      {name: "52 Sweet Truffle", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-52-Sweet-Truffle.jpg"},
+      {name: "62 Casual Elegance", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-62-Casual-Elegance.jpg"},
+      {name: "64 Crushed Silk", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-64-Crushed-Silk.jpg"},
+      {name: "69 Scroll Beige", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-69-Scroll-Beige.jpg"},
+      {name: "90 Free Reign", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-90-Free-Reign.jpg"},
+      {name: "91 Ascot Grey", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-91-Ascot-Grey.jpg"},
+      {name: "92 Silver Clamshell", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-92-Silver-Clamshell.jpg"},
+      {name: "95 Monterey Cliffs", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-95-Monterey-Cliffs.jpg"},
+    ]
+  },
+  {
+    id: "noble-soft",
+    name: "Noble Soft",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Super soft pile. Premium comfort. 13 colours.",
+    colours: [
+      {name: "Thistle 01", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Thistle-200x200.jpg"},
+      {name: "Elephant Dust 02", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Elephant-Dust-200x200.jpg"},
+      {name: "Clay Ridge 03", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Clay-Ridge-200x200.jpg"},
+      {name: "Goose Down 04", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Goose-Down-200x200.jpg"},
+      {name: "Cloud 05", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Cloud-200x200.jpg"},
+      {name: "Feather 06", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Feather-200x200.jpg"},
+      {name: "Rhino Ash 07", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Rhino-Ash-200x200.jpg"},
+      {name: "Platinum 08", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Platinum-200x200.jpg"},
+      {name: "Shell 09", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Shell-200x200.jpg"},
+      {name: "Koala Mist 11", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Koala-Mist-200x200.jpg"},
+      {name: "Coal Dust 12", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Coal-Dust-200x200.jpg"},
+      {name: "Bark 13", img: "https://www.phloor.ie/wp-content/uploads/2026/04/NOBLE-SOFT-Bark-200x200.jpg"},
+    ]
+  },
+  {
+    id: "omega-elite",
+    name: "Omega Elite",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Elite grade carpet. 11 colours.",
+    colours: [
+      {name: "130 Desert Sun", img: "https://www.phloor.ie/wp-content/uploads/2025/05/130-DESERT-SUN-1.jpg"},
+      {name: "132 Sand Dune", img: "https://www.phloor.ie/wp-content/uploads/2025/05/132-SAND-DUNE.jpg"},
+      {name: "140 Latte", img: "https://www.phloor.ie/wp-content/uploads/2025/05/140-LATTE.jpg"},
+      {name: "142 Linen", img: "https://www.phloor.ie/wp-content/uploads/2025/05/142-LINEN.jpg"},
+      {name: "146 Toasted Coconut", img: "https://www.phloor.ie/wp-content/uploads/2025/05/146-TOASTED-COCONUT.jpg"},
+      {name: "193 Nimbus Cloud", img: "https://www.phloor.ie/wp-content/uploads/2025/05/193-NIMBUS-CLOUD.jpg"},
+      {name: "194 December Sky", img: "https://www.phloor.ie/wp-content/uploads/2025/05/194-DECEMBER-SKY.jpg"},
+      {name: "195 Wet Weather", img: "https://www.phloor.ie/wp-content/uploads/2025/05/195-WET-WEATHER.jpg"},
+      {name: "198 Tornado", img: "https://www.phloor.ie/wp-content/uploads/2025/05/198-TORNADO.jpg"},
+    ]
+  },
+  {
+    id: "omega-supreme",
+    name: "Omega Supreme",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Supreme grade performance carpet. 9 colours.",
+    colours: [
+      {name: "330 Desert Sun", img: "https://www.phloor.ie/wp-content/uploads/2025/05/330-DESERT-SUN.jpg"},
+      {name: "332 Sand Dune", img: "https://www.phloor.ie/wp-content/uploads/2025/05/332-SAND-DUNE.jpg"},
+      {name: "340 Latte", img: "https://www.phloor.ie/wp-content/uploads/2025/05/340-LATTE.jpg"},
+      {name: "342 Linen", img: "https://www.phloor.ie/wp-content/uploads/2025/05/342-LINEN.jpg"},
+      {name: "346 Toasted Coconut", img: "https://www.phloor.ie/wp-content/uploads/2025/05/346-TOASTED-COCONUT.jpg"},
+      {name: "393 Nimbus Cloud", img: "https://www.phloor.ie/wp-content/uploads/2025/05/393-NIMBUS-CLOUD.jpg"},
+      {name: "394 December Sky", img: "https://www.phloor.ie/wp-content/uploads/2025/05/394-DECEMBER-SKY.jpg"},
+      {name: "395 Wet Weather", img: "https://www.phloor.ie/wp-content/uploads/2025/05/395-WET-WEATHER.jpg"},
+      {name: "398 Tornado", img: "https://www.phloor.ie/wp-content/uploads/2025/05/398-TORNADO.jpg"},
+    ]
+  },
+  {
+    id: "paramount",
+    name: "Paramount",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Deep plush pile. Premium hotel-quality feel. 11 colours.",
+    colours: [
+      {name: "73 Burlywood", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-73-Burlywood-200x200.jpg"},
+      {name: "76 Soft Grey", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-76-Soft-Grey-200x200.jpg"},
+      {name: "171 Pearl", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-171-Pearl-200x200.jpg"},
+      {name: "173 Foggy Dew", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-173-Foggy-Dew-200x200.jpg"},
+      {name: "174 Silver Cloud", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-174-Silver-Cloud-200x200.jpg"},
+      {name: "175 Greige", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-175-Greige-200x200.jpg"},
+      {name: "177 Granite", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-177-Granite-200x200.jpg"},
+      {name: "273 Sandstone", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-273-Sandstone-200x200.jpg"},
+      {name: "274 Toffee", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-274-Toffee-200x200.jpg"},
+      {name: "275 Greystoke", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-275-Greystoke-200x200.jpg"},
+      {name: "276 Moleskin", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Paramount-276-Moleskin-200x200.jpg"},
+    ]
+  },
+  {
+    id: "phoenix",
+    name: "Phoenix",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Luxury cut pile. 4m & 5m width, combi backing. 13 colours.",
+    colours: [
+      {name: "169 Antique Pearl", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-169.jpg"},
+      {name: "170 Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-170.jpg"},
+      {name: "172 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-172.jpg"},
+      {name: "175 Greystone", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-175.jpg"},
+      {name: "177 Rainstorm", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-177.jpg"},
+      {name: "310 Coral Dust", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-10.jpg"},
+      {name: "340 Soft Fern", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-40.jpg"},
+      {name: "374 Gothic Arch", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-74.jpg"},
+      {name: "375 Graphite", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-75.jpg"},
+      {name: "380 Blue Slate", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-80.jpg"},
+      {name: "386 Indigo", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-86.jpg"},
+      {name: "390 Porcini", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-90.jpg"},
+      {name: "393 Bramble", img: "https://www.phloor.ie/wp-content/uploads/2023/11/phoenix-93.jpg"},
+    ]
+  },
+  {
+    id: "picasso",
+    name: "Picasso",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Paraline, Chevron & Serene designs. 18 colour options across 3 patterns.",
+    colours: [
+      {name: "Paraline 270 Almond", img: "https://www.phloor.ie/wp-content/uploads/2025/03/PARALINE-270-ALMOND-200x200.jpg"},
+      {name: "Paraline 443 Clotted Cream", img: "https://www.phloor.ie/wp-content/uploads/2025/03/PARALINE-443-CLOTTED-CREAM-200x200.jpg"},
+      {name: "Paraline 450 Sand", img: "https://www.phloor.ie/wp-content/uploads/2025/03/PARALINE-450-SAND-200x200.jpg"},
+      {name: "Paraline 805 Caviar", img: "https://www.phloor.ie/wp-content/uploads/2025/03/PARALINE-805-CAVIER-200x200.jpg"},
+      {name: "Paraline 882 Mist", img: "https://www.phloor.ie/wp-content/uploads/2025/03/PARALINE-882-MIST-200x200.jpg"},
+      {name: "Chevron 270 Almond", img: "https://www.phloor.ie/wp-content/uploads/2025/03/CHEVRON-270-ALMOND-200x200.jpg"},
+      {name: "Chevron 443 Clotted", img: "https://www.phloor.ie/wp-content/uploads/2025/03/CHEVRON-443-CLOTTED-200x200.jpg"},
+      {name: "Chevron 862 Paloma", img: "https://www.phloor.ie/wp-content/uploads/2025/03/CHEVRON-862-PALOMA-200x200.jpg"},
+      {name: "Chevron 865 Soft Taupe", img: "https://www.phloor.ie/wp-content/uploads/2025/03/CHEVRON-865-SOFT-TAUPE-200x200.jpg"},
+      {name: "Serene 113 Candy Apple", img: "https://www.phloor.ie/wp-content/uploads/2025/03/SERENE-113-CANDY-APPLE-200x200.jpg"},
+      {name: "Serene 270 Almond", img: "https://www.phloor.ie/wp-content/uploads/2025/03/SERENE-270-ALMOND-200x200.jpg"},
+      {name: "Serene 443 Clotted Cream", img: "https://www.phloor.ie/wp-content/uploads/2025/03/SERENE-443-CLOTTED-CREAM-200x200.jpg"},
+      {name: "Serene 450 Sand", img: "https://www.phloor.ie/wp-content/uploads/2025/03/SERENE-450-SAND-200x200.jpg"},
+      {name: "Serene 591 Shamrock", img: "https://www.phloor.ie/wp-content/uploads/2025/03/SERENE-591-SHAMROCK-200x200.jpg"},
+      {name: "Serene 805 Caviar", img: "https://www.phloor.ie/wp-content/uploads/2025/03/SERENE-805-CAVIER-200x200.jpg"},
+      {name: "Serene 862 Paloma", img: "https://www.phloor.ie/wp-content/uploads/2025/03/SERENE-862-PALOMA-200x200.jpg"},
+      {name: "Serene 865 Soft Taupe", img: "https://www.phloor.ie/wp-content/uploads/2025/03/SERENE-865-SOFT-TAUPE-200x200.jpg"},
+    ]
+  },
+  {
+    id: "pronto",
+    name: "Pronto",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Best value durable saxony. 4m & 5m widths, felt backing. 7 colours.",
+    colours: [
+      {name: "70 Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2021/08/70-Cashmere.jpg"},
+      {name: "72 Truffle", img: "https://www.phloor.ie/wp-content/uploads/2021/08/72-Truffle.jpg"},
+      {name: "73 Ash", img: "https://www.phloor.ie/wp-content/uploads/2021/08/73-Ash.jpg"},
+      {name: "74 Shadow", img: "https://www.phloor.ie/wp-content/uploads/2021/08/74-Shadow.jpg"},
+      {name: "75 Grey", img: "https://www.phloor.ie/wp-content/uploads/2021/08/75-Grey.jpg"},
+      {name: "76 Smoke", img: "https://www.phloor.ie/wp-content/uploads/2021/08/76-Smoke.jpg"},
+      {name: "77 Granite", img: "https://www.phloor.ie/wp-content/uploads/2021/08/77-Granite.jpg"},
+    ]
+  },
+  {
+    id: "regatta",
+    name: "Regatta",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Loop pile carpet. 4m width. 8 colours.",
+    colours: [
+      {name: "4314 Beige", img: "https://www.phloor.ie/wp-content/uploads/2025/01/4314-scaled.jpg"},
+      {name: "4315 Mink", img: "https://www.phloor.ie/wp-content/uploads/2025/01/4315-scaled.jpg"},
+      {name: "4316 Oak", img: "https://www.phloor.ie/wp-content/uploads/2025/01/4316-scaled.jpg"},
+      {name: "4319 Tobacco", img: "https://www.phloor.ie/wp-content/uploads/2025/01/4319-scaled.jpg"},
+      {name: "4321 Cloud", img: "https://www.phloor.ie/wp-content/uploads/2025/01/4321-scaled.jpg"},
+      {name: "4324 Slate", img: "https://www.phloor.ie/wp-content/uploads/2025/01/4324-scaled.jpg"},
+      {name: "6122 Silver", img: "https://www.phloor.ie/wp-content/uploads/2025/01/6122-scaled.jpg"},
+      {name: "6125 Steel", img: "https://www.phloor.ie/wp-content/uploads/2025/01/6125-scaled.jpg"},
+    ]
+  },
+  {
+    id: "scala",
+    name: "Scala Combinations",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Mix-and-match carpet tile combinations. Twist, Fun, Endurance & Marathon styles.",
+    colours: [
+      {name: "Twist 0100", img: "https://www.phloor.ie/wp-content/uploads/2024/11/LAN049STI0100.jpg"},
+      {name: "Fun 0700", img: "https://www.phloor.ie/wp-content/uploads/2024/11/Scala_Fun_0700-scaled.jpg"},
+      {name: "Java Scala", img: "https://www.phloor.ie/wp-content/uploads/2024/11/javaa-300x300.jpg"},
+    ]
+  },
+  {
+    id: "serenity",
+    name: "Serenity",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Calm soft pile for restful spaces. 9 colours.",
+    colours: [
+      {name: "69", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-69.jpg"},
+      {name: "71", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-71.jpg"},
+      {name: "72", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-72.jpg"},
+      {name: "73", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-73.jpg"},
+      {name: "90", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-90.jpg"},
+      {name: "93", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-93.jpg"},
+      {name: "175", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-175.jpg"},
+      {name: "176", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-176.jpg"},
+      {name: "177", img: "https://www.phloor.ie/wp-content/uploads/2026/04/Chamonix-Packshot-Charmonix-177.jpg"},
+    ]
+  },
+  {
+    id: "shazam",
+    name: "Shazam",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Bold loop pile carpet. 11 colours.",
+    colours: [
+      {name: "70", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-70.jpg"},
+      {name: "71", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-71.jpg"},
+      {name: "72", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-72.jpg"},
+      {name: "73", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-73.jpg"},
+      {name: "74", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-74.jpg"},
+      {name: "75", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-75.jpg"},
+      {name: "77", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-77.jpg"},
+      {name: "78", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-78.jpg"},
+      {name: "90", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-90.jpg"},
+      {name: "92", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-92.jpg"},
+      {name: "93", img: "https://www.phloor.ie/wp-content/uploads/2022/07/Shazam-93.jpg"},
+    ]
+  },
+  {
+    id: "sienna",
+    name: "Sienna",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Contemporary carpet in natural and bold tones. 10 colours.",
+    colours: [
+      {name: "220 Acorn", img: "https://www.phloor.ie/wp-content/uploads/2025/05/220-ACORN-1-scaled.jpg"},
+      {name: "230 Flax", img: "https://www.phloor.ie/wp-content/uploads/2025/05/230-FLAX.jpg"},
+      {name: "260 Camel", img: "https://www.phloor.ie/wp-content/uploads/2025/05/260-CAMEL-scaled.jpg"},
+      {name: "400 Coffee", img: "https://www.phloor.ie/wp-content/uploads/2025/05/400-COFFEE-scaled.jpg"},
+      {name: "430 Bamboo Mat", img: "https://www.phloor.ie/wp-content/uploads/2025/05/430-BAMBOO-MAT-scaled.jpg"},
+      {name: "440 Ivory", img: "https://www.phloor.ie/wp-content/uploads/2025/05/440-IVORY-scaled.jpg"},
+      {name: "450 Sand", img: "https://www.phloor.ie/wp-content/uploads/2025/05/450-SAND-scaled.jpg"},
+      {name: "800 Ebony", img: "https://www.phloor.ie/wp-content/uploads/2025/05/800-EBONY-scaled.jpg"},
+      {name: "850 Moonbeam", img: "https://www.phloor.ie/wp-content/uploads/2025/05/850-MOONBEAM-scaled.jpg"},
+      {name: "860 Granite", img: "https://www.phloor.ie/wp-content/uploads/2025/05/860-GRANITE-scaled.jpg"},
+    ]
+  },
+  {
+    id: "silk-romance",
+    name: "Silk Romance",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Silky soft pile with subtle sheen. 9 colours.",
+    colours: [
+      {name: "71 French White", img: "https://www.phloor.ie/wp-content/uploads/2024/11/71-French-white-200x200.jpg"},
+      {name: "85 Bluebell", img: "https://www.phloor.ie/wp-content/uploads/2024/11/85-Bluebell-200x200.jpg"},
+      {name: "90 Wild Mink", img: "https://www.phloor.ie/wp-content/uploads/2024/11/90-Wild-mink-200x200.jpg"},
+      {name: "91 Sandstone", img: "https://www.phloor.ie/wp-content/uploads/2024/11/91-Sandstone-200x200.jpg"},
+      {name: "171 Cornflour", img: "https://www.phloor.ie/wp-content/uploads/2024/11/171-Cornflour-200x200.jpg"},
+      {name: "174 Porcelain", img: "https://www.phloor.ie/wp-content/uploads/2024/11/174-Porcelain-200x200.jpg"},
+      {name: "175 Sable", img: "https://www.phloor.ie/wp-content/uploads/2024/11/175-Sable-200x200.jpg"},
+      {name: "275 Wolfhound", img: "https://www.phloor.ie/wp-content/uploads/2024/11/275-Wolfhound-200x200.jpg"},
+      {name: "979 Slate", img: "https://www.phloor.ie/wp-content/uploads/2024/11/979-Slate-200x200.jpg"},
+    ]
+  },
+  {
+    id: "soft-distinction",
+    name: "Soft Distinction",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Soft luxurious pile. Refined contemporary look. 10 colours.",
+    colours: [
+      {name: "2042 Smoked Rose", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2042-Smoked-Rose-200x200.jpg"},
+      {name: "2242 Creme de la Creme", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2242-Creme-de-la-Creme-200x200.jpg"},
+      {name: "2832 Ash", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2832-Ash-200x200.jpg"},
+      {name: "2842 Greystone", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2842-Greystone-200x200.jpg"},
+      {name: "2844 Moonshine", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2844-Moonshine-200x200.jpg"},
+      {name: "2852 Metal", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2852-Metal-200x200.jpg"},
+      {name: "2862 Paloma", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2862-Paloma-200x200.jpg"},
+      {name: "2872 Silver", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2872-Silver-200x200.jpg"},
+      {name: "2874 Teal Green", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2874-Teal-Green-200x200.jpg"},
+      {name: "2882 Mist", img: "https://www.phloor.ie/wp-content/uploads/2022/08/Soft-Distinction-2882-Mist-200x200.jpg"},
+    ]
+  },
+  {
+    id: "statesman",
+    name: "Statesman",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Classic hardwearing twist pile. 15 colours.",
+    colours: [
+      {name: "15 Aubergine", img: "https://www.phloor.ie/wp-content/uploads/2023/02/15-AUBERGINE.jpg"},
+      {name: "41 Apple Green", img: "https://www.phloor.ie/wp-content/uploads/2023/02/41-APPLE-GREEN.jpg"},
+      {name: "69 Alabaster", img: "https://www.phloor.ie/wp-content/uploads/2023/02/69-ALABASTER.jpg"},
+      {name: "72 Nude", img: "https://www.phloor.ie/wp-content/uploads/2023/02/72-NUDE.jpg"},
+      {name: "73 Rustic White", img: "https://www.phloor.ie/wp-content/uploads/2023/02/73-RUSTIC-WHITE.jpg"},
+      {name: "74 Stone Wash", img: "https://www.phloor.ie/wp-content/uploads/2023/02/74-STONE-WASH.jpg"},
+      {name: "77 Dolomite", img: "https://www.phloor.ie/wp-content/uploads/2023/02/77-DOLOMITE.jpg"},
+      {name: "80 Cornflower", img: "https://www.phloor.ie/wp-content/uploads/2023/02/80-CORNFLOWER.jpg"},
+      {name: "84 Delta Blues", img: "https://www.phloor.ie/wp-content/uploads/2023/02/84-DELTA-BLUES.jpg"},
+      {name: "91 Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2023/02/91-CASHMERE.jpg"},
+      {name: "93 Dune", img: "https://www.phloor.ie/wp-content/uploads/2023/02/93-DUNE.jpg"},
+      {name: "173 Silver Sand", img: "https://www.phloor.ie/wp-content/uploads/2023/02/173-SILVER-SAND.jpg"},
+      {name: "174 Ghost White", img: "https://www.phloor.ie/wp-content/uploads/2023/02/174-GHOST-WHITE.jpg"},
+      {name: "175 Nebula", img: "https://www.phloor.ie/wp-content/uploads/2023/02/175-NEBULA.jpg"},
+      {name: "176 Tungsten", img: "https://www.phloor.ie/wp-content/uploads/2023/02/176-TUNGSTEN.jpg"},
+    ]
+  },
+  {
+    id: "sublime",
+    name: "Sublime",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Sublime softness underfoot. Master bedroom favourite. 12 colours.",
+    colours: [
+      {name: "120 Tropical Sand", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0120-1-200x200.jpg"},
+      {name: "320 Ocean Air", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0320-1-200x200.jpg"},
+      {name: "450 Sage Tint", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0450-1-200x200.jpg"},
+      {name: "520 River Bank", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0520-1-200x200.jpg"},
+      {name: "620 Vanilla Ice", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0620-1-200x200.jpg"},
+      {name: "680 Mocha Cream", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_680-1-200x200.jpg"},
+      {name: "720 Greige", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0720-1-200x200.jpg"},
+      {name: "800 Horse Farm", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0800-1-200x200.jpg"},
+      {name: "850 Mudslide", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0850-1-200x200.jpg"},
+      {name: "920 Silverado", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0920-1-200x200.jpg"},
+      {name: "930 Shark Skin", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_0930-1-200x200.jpg"},
+      {name: "960 City Sky Line", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Sublime_3237_960-1-200x200.jpg"},
+    ]
+  },
+  {
+    id: "supercord",
+    name: "Supercord",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Contract needle punch cord carpet. 4m width, gel backing, fire certified. 9 colours.",
+    colours: [
+      {name: "Beige 97", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super97.jpg"},
+      {name: "Blue 85", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super85.jpg"},
+      {name: "Brown 91", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super91.jpg"},
+      {name: "Denim 84", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super84.jpg"},
+      {name: "Dark Grey 74", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super74.jpg"},
+      {name: "Green 44", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super44.jpg"},
+      {name: "Grey 73", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super73.jpg"},
+      {name: "Red 15", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super15.jpg"},
+      {name: "Anthracite 78", img: "https://www.phloor.ie/wp-content/uploads/2019/08/super78.jpg"},
+    ]
+  },
+  {
+    id: "switch",
+    name: "Switch",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Versatile loop pile. Easy to maintain. 11 colours.",
+    colours: [
+      {name: "102 Sugar", img: "https://www.phloor.ie/wp-content/uploads/2024/11/102-Sugar.jpg"},
+      {name: "122 Tofu", img: "https://www.phloor.ie/wp-content/uploads/2024/11/122-Tofu.jpg"},
+      {name: "134 Dust", img: "https://www.phloor.ie/wp-content/uploads/2024/11/134-Dust.jpg"},
+      {name: "139 Gray", img: "https://www.phloor.ie/wp-content/uploads/2024/11/139-Gray.jpg"},
+      {name: "175 Plum", img: "https://www.phloor.ie/wp-content/uploads/2024/11/175-Plum.jpg"},
+      {name: "184 Peat", img: "https://www.phloor.ie/wp-content/uploads/2024/11/184-Peat.jpg"},
+      {name: "189 Graphite", img: "https://www.phloor.ie/wp-content/uploads/2024/11/189-Graphite.jpg"},
+      {name: "191 Ink", img: "https://www.phloor.ie/wp-content/uploads/2024/11/191-Ink.jpg"},
+      {name: "194 Forest", img: "https://www.phloor.ie/wp-content/uploads/2024/11/194-Forest.jpg"},
+      {name: "212 Opaque", img: "https://www.phloor.ie/wp-content/uploads/2024/11/Switch-212-Opaque.jpg"},
+      {name: "661 Ocean", img: "https://www.phloor.ie/wp-content/uploads/2024/11/Switch-661-Ocean-scaled.jpg"},
+    ]
+  },
+  {
+    id: "tampa",
+    name: "Tampa Broadloom",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Commercial broadloom. 4m width. 6 colours.",
+    colours: [
+      {name: "84", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30684.jpg"},
+      {name: "86", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30686.jpg"},
+      {name: "90", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30690.jpg"},
+      {name: "94", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30694.jpg"},
+      {name: "45", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30645.jpg"},
+      {name: "76", img: "https://www.phloor.ie/wp-content/uploads/2024/09/CON30676-1.jpg"},
+    ]
+  },
+  {
+    id: "tango",
+    name: "Tango",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Loop pile construction. 4m width, felt backing. 5 colours.",
+    colours: [
+      {name: "4012 Beige", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Tango-4012.jpg"},
+      {name: "4015 Mink", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Tango-4015.jpg"},
+      {name: "4016 Grey Beige", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Tango-4016.jpg"},
+      {name: "4019 Tobacco", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Tango-4019.jpg"},
+      {name: "4026 Grey", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Tango-4026.jpg"},
+    ]
+  },
+  {
+    id: "turbo-loop",
+    name: "Turbo Loop",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "High-performance loop pile. 9 colours.",
+    colours: [
+      {name: "1714", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-1714.jpg"},
+      {name: "1735", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-1735.jpg"},
+      {name: "9608", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-9608.jpg"},
+      {name: "9618", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-9618.jpg"},
+      {name: "9622", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-9622.jpg"},
+      {name: "9623", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-9623.jpg"},
+      {name: "9628", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-9628.jpg"},
+      {name: "9629", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-9629.jpg"},
+      {name: "9630", img: "https://www.phloor.ie/wp-content/uploads/2021/08/Turbo-Loop-9630.jpg"},
+    ]
+  },
+  {
+    id: "ulster-tweed",
+    name: "Ulster Tweed",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Wool-blend tweed loop carpet. Natural Irish character. 11 colours.",
+    colours: [
+      {name: "111 Sweet Perfume", img: "https://www.phloor.ie/wp-content/uploads/2025/08/111-SWEET-PERFUME-scaled.jpeg"},
+      {name: "160 Sand Dune", img: "https://www.phloor.ie/wp-content/uploads/2025/08/160-SAND-DUNE-scaled.jpeg"},
+      {name: "162 Toasted Almond", img: "https://www.phloor.ie/wp-content/uploads/2025/08/162-TOASTED-ALMOND-scaled.jpeg"},
+      {name: "167 Truffle", img: "https://www.phloor.ie/wp-content/uploads/2025/08/167-TRUFFLE-scaled.jpeg"},
+      {name: "168 Hickory", img: "https://www.phloor.ie/wp-content/uploads/2025/08/168-HICKORY.jpeg"},
+      {name: "169 Beechwood", img: "https://www.phloor.ie/wp-content/uploads/2025/08/169-BEECHWOOD-scaled.jpeg"},
+      {name: "176 Horizon", img: "https://www.phloor.ie/wp-content/uploads/2025/08/176-HORIZON-scaled.jpeg"},
+      {name: "177 Granite Cliff", img: "https://www.phloor.ie/wp-content/uploads/2025/08/177-GRANITE-CLIFF-scaled.jpeg"},
+      {name: "191 Bracken", img: "https://www.phloor.ie/wp-content/uploads/2025/08/191-BRACKEN-scaled.jpeg"},
+      {name: "193 Chestnut", img: "https://www.phloor.ie/wp-content/uploads/2025/08/193-CHESTNUT-scaled.jpeg"},
+    ]
+  },
+  {
+    id: "vanity",
+    name: "Vanity",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Soft twist pile. Wide contemporary colour range. 23 colours.",
+    colours: [
+      {name: "102 Snow", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-102-Snow-scaled.jpg"},
+      {name: "105 Powder", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-105-Powder-scaled.jpg"},
+      {name: "112 Pearl", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-112-Pearl-scaled.jpg"},
+      {name: "119 Salt", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-119-Salt-scaled.jpg"},
+      {name: "129 Ash", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-129-Ash-scaled.jpg"},
+      {name: "133 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-133-Taupe-scaled.jpg"},
+      {name: "139 Silver", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-139-Silver-scaled.jpg"},
+      {name: "145 Copper", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-145-Copper-scaled.jpg"},
+      {name: "146 Khaki", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-146-Khaki-scaled.jpg"},
+      {name: "151 Atlantic", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-151-Atlantic-scaled.jpg"},
+      {name: "155 Rose", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-155-Rose-scaled.jpg"},
+      {name: "159 Dust", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-159-Dust-scaled.jpg"},
+      {name: "173 Seal", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-173-Seal-scaled.jpg"},
+      {name: "183 Aubergine", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-183-Aubergine-scaled.jpg"},
+      {name: "184 Loam", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-184-Loam-scaled.jpg"},
+      {name: "189 Elephant", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-189-Elephant-scaled.jpg"},
+      {name: "193 Chocolate", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-193-Chocolate-scaled.jpg"},
+      {name: "199 Onyx", img: "https://www.phloor.ie/wp-content/uploads/2024/06/2173_Vanity-199-Onyx-scaled.jpg"},
+      {name: "225 Apricot", img: "https://www.phloor.ie/wp-content/uploads/2024/06/Vanity-225-Apricot-D.jpg"},
+      {name: "244 Bulrush", img: "https://www.phloor.ie/wp-content/uploads/2024/06/Vanity-244-Bulrush-D.jpg"},
+      {name: "245 Grenadine", img: "https://www.phloor.ie/wp-content/uploads/2024/06/Vanity-245-Grenadine-D.jpg"},
+      {name: "271 Indigo", img: "https://www.phloor.ie/wp-content/uploads/2024/06/Vanity-271-Indigo-D.jpg"},
+      {name: "284 Spruce", img: "https://www.phloor.ie/wp-content/uploads/2024/06/Vanity-284-Spruce-D.jpg"},
+    ]
+  },
+  {
+    id: "windsor-velvet",
+    name: "Windsor Velvet",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Sumptuous velvet pile. Classic and refined. 4m width. 14 colours.",
+    colours: [
+      {name: "173 Vintage White", img: "https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-173.jpg"},
+      {name: "272 Taupe", img: "https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-72.jpg"},
+      {name: "275 Pebble Grey", img: "https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-75.jpg"},
+      {name: "276 Provence Grey", img: "https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-76.jpg"},
+      {name: "290 Roasted Almond", img: "https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-90.jpg"},
+      {name: "293 Moleskin", img: "https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-93.jpg"},
+      {name: "377 Elephant", img: "https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-377.jpg"},
+      {name: "561", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Windsor-Velvet-561.jpg"},
+      {name: "562", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Windsor-Velvet-562.jpg"},
+      {name: "568", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Windsor-Velvet-568.jpg"},
+      {name: "569", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Windsor-Velvet-569.jpg"},
+      {name: "571", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Windsor-Velvet-571.jpg"},
+      {name: "573", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Windsor-Velvet-573.jpg"},
+      {name: "576", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Windsor-Velvet-576.jpg"},
+    ]
+  },
+  {
+    id: "zenith-rib",
+    name: "Zenith Rib",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Ribbed loop pile. Textured contemporary look. 9 colours.",
+    colours: [
+      {name: "318 Pebble Grey", img: "https://www.phloor.ie/wp-content/uploads/2023/10/andes-18-1.jpg"},
+      {name: "320 Smoked Green", img: "https://www.phloor.ie/wp-content/uploads/2023/10/andes-20-1.jpg"},
+      {name: "332 Azure Blue", img: "https://www.phloor.ie/wp-content/uploads/2023/10/andes-32-1.jpg"},
+      {name: "340 Claret", img: "https://www.phloor.ie/wp-content/uploads/2023/10/andes-40-1.jpg"},
+      {name: "350 Anthracite", img: "https://www.phloor.ie/wp-content/uploads/2023/10/andes-50-1.jpg"},
+      {name: "354 Charcoal", img: "https://www.phloor.ie/wp-content/uploads/2023/10/andes-54-1.jpg"},
+      {name: "361 Cashmere", img: "https://www.phloor.ie/wp-content/uploads/2023/10/andes-61-1-e1697465836840.jpg"},
+      {name: "370 Classic Grey", img: "https://www.phloor.ie/wp-content/uploads/2023/10/andes-70-1.jpg"},
+      {name: "380 Rich Peat", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-andes-80-1.jpg"},
+    ]
+  },
+  {
+    id: "zenith-velour",
+    name: "Zenith Velour",
+    category: "Carpet",
+    filter: "carpet",
+    desc: "Smooth velour finish. Wide palette. 10 colours.",
+    colours: [
+      {name: "114 Steel", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-14-200x200.jpg"},
+      {name: "118 Pebble Grey", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-18-200x200.jpg"},
+      {name: "134 Moroccan Blue", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-34-200x200.jpg"},
+      {name: "135 Delta Blues", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-35-e1697466950824-200x200.jpg"},
+      {name: "150 Anthracite", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-50-200x200.jpg"},
+      {name: "162 Sandstone", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-62-200x200.jpg"},
+      {name: "168 Nutmeg", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-68-200x200.jpg"},
+      {name: "170 Classic Grey", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-70-200x200.jpg"},
+      {name: "171 Greige", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-71-200x200.jpg"},
+      {name: "182 Cinnamon", img: "https://www.phloor.ie/wp-content/uploads/2023/10/001-zenith-82-200x200.jpg"},
+    ]
+  },
+  {
+    id: "actual-plus",
+    name: "Actual Plus R10",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "R10 slip resistance. 3m & 4m widths.",
+    colours: [
+      {name: "Keyline 909M", img: "https://www.phloor.ie/wp-content/uploads/2019/08/actualplus909mroomsetting-scaled-300x300.jpg"},
+    ]
+  },
+  {
+    id: "avant-garde",
+    name: "Avant-Garde R10",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "Prime Oak finish. R10. 3m & 4m widths.",
+    colours: [
+      {name: "Prime Oak 130L", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Prime-oak-130L-ambient-300x300.jpg"},
+    ]
+  },
+  {
+    id: "cushion-tex",
+    name: "Cushion Tex",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "Cushioned vinyl for comfort underfoot. 3m & 4m.",
+    colours: [
+      {name: "Nimes 46", img: "https://www.phloor.ie/wp-content/uploads/2024/11/IntSho_Nimes46-WEB1280-300x300.jpg"},
+    ]
+  },
+  {
+    id: "eclipse",
+    name: "Eclipse",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "R11 slip resistance. 0.4 PU wear layer. 15-year warranty. 3m & 4m.",
+    colours: [
+      {name: "46 Granary", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Granero-46_landscape_room-PRINT2560.jpg"},
+      {name: "64 Harvest Oak", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Cherbourg-Oak-64_portrait_22751-WEB1280.jpg"},
+      {name: "46 Harvest Oak", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Cherbourg-Oak-46_portrait-WEB1280.jpg"},
+      {name: "98 Urban", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Puno-98_portrait-WEB1280.jpg"},
+      {name: "74 Granite Mist", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Previa-574_portrait_room-WEB1280.jpg"},
+      {name: "58 Herringbone", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Patagonia-558_roomshot_portrait-WEB1280.jpg"},
+      {name: "91 Oregon", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Lumber-591_portrait_room-WEB1280.jpg"},
+      {name: "46 Herringbone", img: "https://www.phloor.ie/wp-content/uploads/2026/02/IntSho_Patagonia46-WEB1280.jpg"},
+      {name: "92 Granary", img: "https://www.phloor.ie/wp-content/uploads/2026/02/IntSho_Granero92-WEB1280.jpg"},
+      {name: "546 Granary", img: "https://www.phloor.ie/wp-content/uploads/2026/02/Granero-546_portrait_room-WEB1280.jpg"},
+    ]
+  },
+  {
+    id: "home-tex-vinyl",
+    name: "Home Tex",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "Tex Bac backing. R10. Underfloor heating compatible. 3m & 4m. 8 colours.",
+    colours: [
+      {name: "Cameo 926D", img: "https://www.phloor.ie/wp-content/uploads/2026/01/10.-Cameo-926D-scaled.jpg"},
+      {name: "Verona 989M", img: "https://www.phloor.ie/wp-content/uploads/2026/01/11.-VERONA-060736-989M-scaled.jpg"},
+      {name: "Verona 999D", img: "https://www.phloor.ie/wp-content/uploads/2026/01/12.-VERONA-080736-999D-scaled.jpg"},
+      {name: "Westbury 162L", img: "https://www.phloor.ie/wp-content/uploads/2026/01/02.-Westbury-162L-scaled.jpg"},
+      {name: "Westbury 694M", img: "https://www.phloor.ie/wp-content/uploads/2026/01/03.-Westbury-694M-scaled.jpg"},
+      {name: "Aged Oak 096L", img: "https://www.phloor.ie/wp-content/uploads/2026/01/06.-AGED-OAK-096L-scaled.jpg"},
+      {name: "Aged Oak 271M", img: "https://www.phloor.ie/wp-content/uploads/2026/01/08.-Aged-oak-271M-scaled.jpg"},
+      {name: "Cameo 148L", img: "https://www.phloor.ie/wp-content/uploads/2026/01/09.-Cameo-023300-148L-scaled.jpg"},
+    ]
+  },
+  {
+    id: "mega-tex",
+    name: "Mega Tex R10",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "R10 slip resistance. 4m width.",
+    colours: [
+      {name: "Padstow 796D", img: "https://www.phloor.ie/wp-content/uploads/2023/08/Padstow-796D-300x300.jpg"},
+    ]
+  },
+  {
+    id: "prime-tex",
+    name: "Prime Tex",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "Premium vinyl. 3m & 4m widths.",
+    colours: [
+      {name: "Avignon 94", img: "https://www.phloor.ie/wp-content/uploads/2024/04/PRIME-TEX-AVIGNON-94-300x300.jpg"},
+    ]
+  },
+  {
+    id: "solideo",
+    name: "Solideo",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "Estate Oak finish. 3m & 4m widths.",
+    colours: [
+      {name: "Estate Oak 95", img: "https://www.phloor.ie/wp-content/uploads/2024/11/IntSho_EstateOak95-WEB1280-300x300.jpg"},
+    ]
+  },
+  {
+    id: "tex-r11",
+    name: "Tex R11",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "R11 slip resistance. 2m & 4m widths.",
+    colours: [
+      {name: "Cornwall 109M", img: "https://www.phloor.ie/wp-content/uploads/2019/08/Safe-Tex-R11_Cornwall-109M-room-1-300x300.jpg"},
+    ]
+  },
+  {
+    id: "turbo-r10",
+    name: "Turbo R10",
+    category: "Vinyl",
+    filter: "vinyl",
+    desc: "R10 rating. 3m & 4m widths.",
+    colours: [
+      {name: "Venice Tile 990D", img: "https://www.phloor.ie/wp-content/uploads/2019/08/turbo990droomsetting-scaled-300x300.jpg"},
+    ]
+  },
+  {
+    id: "blossom",
+    name: "Blossom",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "Natural look artificial grass. 4m & 5m widths.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Bliss-grass-range-3-300x300.jpg"},
+    ]
+  },
+  {
+    id: "admire",
+    name: "Grass Admire 3515",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "35mm pile. 4m width.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2023/05/thumbnail_001-admire3018-f-300x232.jpg"},
+    ]
+  },
+  {
+    id: "mercury",
+    name: "Grass Mercury 3015",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "30mm pile. 4m width.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2024/04/Mercury3015-300x300.jpg"},
+    ]
+  },
+  {
+    id: "impress",
+    name: "Impress 45L",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "45mm luxury pile artificial grass.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2023/05/impress-45-30x10-1-1-300x300.jpg"},
+    ]
+  },
+  {
+    id: "major",
+    name: "Major 45",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "45mm heavy-duty grass. 4m width.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2023/05/Grass-Major-4-300x214.jpg"},
+    ]
+  },
+  {
+    id: "megan",
+    name: "Megan 38",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "38mm pile. Mix of light & dark green. 4m & 5m widths.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2020/09/Sensual-38-grass-range-300x300.jpg"},
+    ]
+  },
+  {
+    id: "aimsley",
+    name: "Supa Grass Aimsley 22",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "22mm pile. Natural appearance. 4m width.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2023/03/Aimsley_top-300x300.jpg"},
+    ]
+  },
+  {
+    id: "bobby",
+    name: "Supa Grass Bobby 32",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "32mm pile. Lush appearance. 4m width.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2023/03/Bobby_top-300x300.jpg"},
+    ]
+  },
+  {
+    id: "charlie",
+    name: "Supa Grass Charlie 28",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "28mm pile. Great for gardens. 4m width.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2023/03/Charlie_top-300x300.jpg"},
+    ]
+  },
+  {
+    id: "daisy",
+    name: "Supa Grass Daisy 38",
+    category: "Artificial Grass",
+    filter: "grass",
+    desc: "38mm pile. Realistic look. 4m width.",
+    colours: [
+      {name: "Green", img: "https://www.phloor.ie/wp-content/uploads/2023/03/Daisy_top-300x300.jpg"},
+    ]
+  },
+];
+
+</script>
+
+<!-- HEADER -->
+<header id="site-header">
+  <nav class="container">
+    <a href="#" class="nav-logo"><img src="https://floortradeireland.ie/assets/logo-X81Pp4El.png" alt="Floor Trade Ireland" /></a>
+    <ul class="nav-links">
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" id="menuClose">&times;</span>
+  <a href="#offers" class="ml">Offers</a>
+  <a href="#products" class="ml">Products</a>
+  <a href="#gallery" class="ml">Gallery</a>
+  <a href="#testimonials" class="ml">Reviews</a>
+  <a href="#faq" class="ml">FAQ</a>
+  <a href="#contact" class="ml">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">Ireland's Premium Flooring Specialist</div>
+      <h1 class="hero-title">Floors that age<br /><em>beautifully</em></h1>
+      <p class="hero-sub">Curated European flooring collections — supplied and professionally fitted across all of Ireland. From premium laminate to plush carpet, artificial grass to luxury vinyl, we bring the showroom to you.</p>
+      <div class="hero-actions">
+        <a href="#offers" class="btn btn-primary">View Current Offers</a>
+        <a href="#contact" class="btn btn-white">Get a Free Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num">500+</div><div class="hero-stat-label">Homes transformed</div></div>
+        <div><div class="hero-stat-num">5★</div><div class="hero-stat-label">Average review rating</div></div>
+        <div><div class="hero-stat-num">Free</div><div class="hero-stat-label">Nationwide delivery</div></div>
+        <div><div class="hero-stat-num">14-day</div><div class="hero-stat-label">Returns guarantee</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div id="trust-bar">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item">🚚 Free nationwide delivery</div>
+      <div class="trust-item">🔨 Professional fitting team</div>
+      <div class="trust-item">🌿 European-sourced materials</div>
+      <div class="trust-item">↩️ 14-day returns</div>
+      <div class="trust-item">💬 WhatsApp support</div>
+    </div>
+  </div>
+</div>
+
+<!-- OFFERS -->
+<section id="offers">
+  <div class="container">
+    <div class="offers-header fade-up">
+      <div class="section-label">Limited Time</div>
+      <h2 class="section-title">Current Bundle Deals</h2>
+      <p>Save big with our curated installation packages — floor, stairs, and fitting all included.</p>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-card fade-up">
+        <img class="offer-img" src="https://floortradeireland.ie/assets/deal-laminate-DjHhh4dC.jpg" alt="Full House Laminate Bundle" loading="lazy" />
+        <div class="offer-body">
+          <span class="offer-badge">Most Popular</span>
+          <div class="offer-title">Full House Laminate Bundle</div>
+          <p class="offer-desc">12mm water-resistant laminate throughout with free stairs carpet — supply and fitted.</p>
+          <a href="#contact" class="btn btn-primary">Get This Deal</a>
+        </div>
+      </div>
+      <div class="offer-card fade-up">
+        <img class="offer-img" src="https://floortradeireland.ie/assets/deal-aqua-DcENAbNP.jpg" alt="8mm Aqua Laminate Bundle" loading="lazy" />
+        <div class="offer-body">
+          <span class="offer-badge">Mix &amp; Match</span>
+          <div class="offer-title">8mm Aqua Laminate Bundle</div>
+          <p class="offer-desc">Full-house Aqua laminate with mix-and-match carpet options for bedrooms and hallway.</p>
+          <a href="#contact" class="btn btn-primary">Get This Deal</a>
+        </div>
+      </div>
+      <div class="offer-card fade-up">
+        <img class="offer-img" src="https://floortradeireland.ie/assets/deal-carpet-ClTzMdhL.jpg" alt="Carpet Refresh Bundle" loading="lazy" />
+        <div class="offer-body">
+          <span class="offer-badge">Best Value</span>
+          <div class="offer-title">Carpet Refresh</div>
+          <p class="offer-desc">3 bedrooms plus stairs &amp; landing, up to 60 yards of selected carpet ranges — fitted.</p>
+          <a href="#contact" class="btn btn-primary">Get This Deal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRAFTSMANSHIP -->
+<section id="craftsmanship">
+  <div class="container">
+    <div class="craft-grid">
+      <div class="craft-img-wrap fade-up">
+        <img class="craft-img" src="https://floortradeireland.ie/assets/craft-installer-DBlSAODM.jpg" alt="Expert floor installation" loading="lazy" />
+        <div class="craft-img-accent"></div>
+        <div class="craft-years">
+          <span class="craft-years-num">10+</span>
+          <div class="craft-years-label">Years experience</div>
+        </div>
+      </div>
+      <div class="craft-content fade-up">
+        <div class="section-label">Our Craft</div>
+        <h2 class="section-title">European quality,<br />Irish expertise</h2>
+        <p>We source directly from the finest mills in Europe — materials finished with hard-wax oils and matte lacquers that let the wood breathe and age with character. Every product is trade-tested before it reaches your home.</p>
+        <div class="craft-features">
+          <div class="craft-feature"><div class="craft-feature-icon">🌲</div><div><div class="craft-feature-title">Sourced from European Mills</div><div class="craft-feature-desc">The finest timber and textile regions across Europe.</div></div></div>
+          <div class="craft-feature"><div class="craft-feature-icon">🎨</div><div><div class="craft-feature-title">Natural Finishes</div><div class="craft-feature-desc">Hard-wax oils and matte lacquers that enhance natural character.</div></div></div>
+          <div class="craft-feature"><div class="craft-feature-icon">✅</div><div><div class="craft-feature-title">Architect Approved</div><div class="craft-feature-desc">Trade-tested by leading Irish architects and interior designers.</div></div></div>
+          <div class="craft-feature"><div class="craft-feature-icon">🔧</div><div><div class="craft-feature-title">In-House Fitting Team</div><div class="craft-feature-desc">Leinster covered by our own team; vetted partners nationwide.</div></div></div>
+        </div>
+        <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="container">
+    <div class="products-header fade-up">
+      <div class="section-label">Our Range</div>
+      <h2 class="section-title">Flooring for every room</h2>
+      <p>Laminate · Carpet · Vinyl · Artificial Grass. Click any product to explore colours and request a quote or free sample.</p>
+    </div>
+    <div class="products-filter fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="laminate">Laminate</button>
+      <button class="filter-btn" data-filter="carpet">Carpet</button>
+      <button class="filter-btn" data-filter="vinyl">Vinyl</button>
+      <button class="filter-btn" data-filter="grass">Artificial Grass</button>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div style="text-align:center;margin-top:48px" class="fade-up">
+      <p style="color:var(--muted);margin-bottom:20px">Showing our full range — we stock many more colours in-store. Free samples delivered nationwide.</p>
+      <a href="#contact" class="btn btn-primary">Request a Free Sample or Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT MODAL -->
+<div class="prod-modal-overlay" id="prodModal" role="dialog" aria-modal="true" aria-label="Product colour selector">
+  <div class="prod-modal">
+    <div class="prod-modal-preview" id="modalPreview">
+      <img id="modalPreviewImg" src="" alt="" />
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="prod-modal-info">
+      <div class="modal-category" id="modalCat"></div>
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-colours-header">
+        <div class="modal-colours-label" id="modalColoursCount">Available Colours</div>
+        <div class="modal-selected-colour">Selected: <span id="modalSelectedColour">–</span></div>
+      </div>
+      <div class="modal-swatches" id="modalSwatches"></div>
+      <div class="modal-actions">
+        <button class="btn btn-gold" id="modalQuoteBtn">Get a Quote for This Colour →</button>
+        <button class="btn btn-outline" id="modalSampleBtn">Order a Free Sample</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header fade-up">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Real installations</h2>
+      <p>Every photo is a real job completed by our team. Click any image to enlarge.</p>
+    </div>
+
+    <!-- Row 1: big + medium -->
+    <div class="gallery-grid fade-up">
+      <div class="gallery-item g-large" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/557809888_122160132542428195_7489661487569098725_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=l46zvjSDG1kQ7kNvwEcyEEp&_nc_oc=AdqSmWkJq8MyMGyLfkj_jC2DG0KugQnurqgKnC1MB9qn2PdKShs9dVDy9GFB7LMtjZBx2hsFzlH9yhJdUGmJv2Ey&_nc_zt=23&_nc_ht=scontent.fdub8-1.fna&_nc_gid=8Q23gEs0tSQSd-6PbVn7mw&_nc_ss=7b2a8&oh=00_Af9VpXMepcIk840VDMtCouwV7e0b9m-klGUyhqJWiReZYg&oe=6A265FC0" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Floor Trade Ireland · Real installation</div>
+      </div>
+      <div class="gallery-item g-med" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub4-2.fna.fbcdn.net/v/t39.30808-6/556115767_122159484020428195_9194861567027503495_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=2NE5dLgepc8Q7kNvwExRqy-&_nc_oc=Adrb2eP-gG1ctua9lrEcjQXq6wMQf2qEc-sZP11o3HDx5jedpdD71wXVcw0p6aK8i-NwKIsBx77rH-DPiCRJX7mV&_nc_zt=23&_nc_ht=scontent.fdub4-2.fna&_nc_gid=8GJwnoOWLEOGwBuQb9ZpQg&_nc_ss=7b2a8&oh=00_Af9B8FmhN60hpXHXMEOVP1NSe278F_cPclPUtKQqTcPzEw&oe=6A26464D" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Floor Trade Ireland · Real installation</div>
+      </div>
+    </div>
+
+    <!-- Row 2: six small -->
+    <div class="gallery-grid fade-up" style="margin-top:16px">
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub4-2.fna.fbcdn.net/v/t39.30808-6/555913035_122159483798428195_8197591979082884875_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rrz0SwCOZ28Q7kNvwHjEF_Y&_nc_oc=AdqoOd45bFt4ze9iflva0snaGzYaI7EtIIB47buZCXHyiuDuq2Wx73znnIsfR5_xrnsiy6X25iPM7Y4v1K42Xhi-&_nc_zt=23&_nc_ht=scontent.fdub4-2.fna&_nc_gid=RrECUq_jP9k9gBJ1MVgw7A&_nc_ss=7b2a8&oh=00_Af87Eo1lXXp0cppBzpncjEGWlCNE3W6c6xswweKuV_UmhQ&oe=6A263AEF" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/486505610_122139586094428195_1776023775568306825_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Us_rU2XR2HUQ7kNvwFqQrDm&_nc_oc=Adpz97TaJvxgp5PAircJgmKQythgVdD6A1equLWe21x1UeGKbO8818QSjbyPXFJb2wXOhKkUY43Azn1fWePUVaex&_nc_zt=23&se=-1&_nc_ht=scontent.fdub8-1.fna&_nc_gid=5Htj2W1L6P0NhiYCawbvIw&_nc_ss=7b2a8&oh=00_Af9NfInrQnnSRB9MoXXZak2Knotfhmiub8KaG6sm6tcwHw&oe=6A262F6F" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/486698783_122139585482428195_3918351922516402930_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=URQwPgwysJ8Q7kNvwE4G5dT&_nc_oc=Adp7rG4dnGBwGa767XiObYKPX3_BCNukkiPXmUoOKnMzq-IAi59AmoBdRlQjjZ9wo9pRuZZqk9zlybyIIz_up2_G&_nc_zt=23&se=-1&_nc_ht=scontent.fdub8-1.fna&_nc_gid=ZXCfb59s7pTJlaIjgtCgJQ&_nc_ss=7b2a8&oh=00_Af8wdREihlFN0PJFpWnUioFS6jYqY0_AC08aGoYZ8cKCtg&oe=6A265747" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub4-2.fna.fbcdn.net/v/t39.30808-6/486483914_122139485810428195_6371450418182170422_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pnj0WMIalnIQ7kNvwFTNOGZ&_nc_oc=AdqQhnnSGA0jRPxuOCd_pPfYRtAQ5jDvr_kjx4h2oKaLquWfekkuJY7CSMT2mlrJAr6PWcdg-NCtsrR_5idIhGkA&_nc_zt=23&se=-1&_nc_ht=scontent.fdub4-2.fna&_nc_gid=SKdONiAzyQNkhB7FejjaVQ&_nc_ss=7b2a8&oh=00_Af90PjwMD5oFnIr0CohsoCiqnT7wZcCb3EcFtQL16xCiBg&oe=6A263C87" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub4-2.fna.fbcdn.net/v/t39.30808-6/485731663_122138907566428195_2932477749236105608_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rfbC-7H0hUgQ7kNvwEa5dM8&_nc_oc=Adq7fmuy8KxBlujwD0l44SJIhfR7elbHxJhQiYd7bF9cxtJ_lMW8rE7-asLKM2Ri4TOJN3-Tj44wCuCRn19D7QKN&_nc_zt=23&se=-1&_nc_ht=scontent.fdub4-2.fna&_nc_gid=q4G2pJi7FNw0S5WNtpP3Mg&_nc_ss=7b2a8&oh=00_Af-qyHj2OeGeuI0NYkmuYDCzRQ-ngajHvR5ugGbcpp-VXQ&oe=6A265E7D" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/486190436_122138907440428195_4572097522058468863_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=FeBMjbFf04AQ7kNvwFcgjk2&_nc_oc=Adre-ZVO2skXIYRzy2lBJilGzaiCy9VVOO7gjPJfS0cs6ICy-w1_63BrLcSyWGjo_tRTBZbgGqflToSfp7ifjBFU&_nc_zt=23&_nc_ht=scontent.fdub8-1.fna&_nc_gid=JcHtQW4CU5-f6spQIfK4hg&_nc_ss=7b2a8&oh=00_Af-zKl3EuYgITL-5aWGCVgB5UsyNcMQeDPXgTtRkX6elBw&oe=6A264D82" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+    </div>
+
+    <!-- Row 3: six small -->
+    <div class="gallery-grid fade-up" style="margin-top:16px">
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/485397519_122138907542428195_7745496608591645250_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=O4M8HQeubwIQ7kNvwHDBzvq&_nc_oc=AdpzI2wPka0Wo874-8xWRH8wAiPK8CrMX4iis10mS4vqFNlKNBAFKN1DhlmfobZal6-ZVik_OJPa_uUHeQSTV2B8&_nc_zt=23&se=-1&_nc_ht=scontent.fdub8-1.fna&_nc_gid=wFmNXO7NziU0hB5iZeKbRw&_nc_ss=7b2a8&oh=00_Af9woBy2Yh5hPAFBBd7dtGz4_K62l7sdrKSnB-KkQ2mibw&oe=6A265C1C" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/483770541_122137737812428195_5683461183220395211_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=WtULyN8btd8Q7kNvwHOTrFN&_nc_oc=AdpugBXH2d7ZXKJ1pFtxw4kSowmP2cvhfIIHfKKLeyoah9t-dG2eZNXNE03Q6jktxyQy9vxb4qyjKrZ-cqggtTwZ&_nc_zt=23&_nc_ht=scontent.fdub8-1.fna&_nc_gid=guN5dOxXxxt9v06S4PbFtQ&_nc_ss=7b2a8&oh=00_Af82jPlWOO2nmH53O0BSzJh9TQB4FzRLJhaGwCW-jfkR_Q&oe=6A262BE5" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub4-2.fna.fbcdn.net/v/t39.30808-6/473446481_122131619600428195_1732957047883576236_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=K_30DgrgCsEQ7kNvwFfkn8u&_nc_oc=Adrp3OF2sz_jE-3S9wk67GPoC6muI8DeiI0gMMAVmHA_8zvZdf3YRtYrfS_8PofDeQFJou3dlNDPKfP4uDFJSjA3&_nc_zt=23&se=-1&_nc_ht=scontent.fdub4-2.fna&_nc_gid=lOCAwWVXWz7pHX1qKK5O0Q&_nc_ss=7b2a8&oh=00_Af-wGbK8CDZdwZhKb6uXLrD__NmXUrA_AjC-S6CGKDDc9A&oe=6A2646B5" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub4-2.fna.fbcdn.net/v/t39.30808-6/474662779_122132573288428195_7863371593791507239_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=S_fSD8F-3JoQ7kNvwFLj7_D&_nc_oc=AdpkqNGCwwZfhyrLul6ky16noYHyanVzqhpZiil5LspSmhx6FCjnpL7ATBhlvnoBDwdlhLN5_J_4MzwhOUa8b-9o&_nc_zt=23&_nc_ht=scontent.fdub4-2.fna&_nc_gid=M2u7JSc--lN5iYaVMyK3tQ&_nc_ss=7b2a8&oh=00_Af86HUCGryAe-FyuTNBP6ZiFxxaX6s8vc7U-diNcMHBCoQ&oe=6A26321B" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/469794114_122127229628428195_9190176464778018882_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Q7-ukKPHjH0Q7kNvwHCXy8Q&_nc_oc=Adr-gOhF7ienLMc_0_TFpxaeoSAnB8TTbOsEzAJd8yuQh0vnF9C2ANFtd7PM-CCMmv-1V9Z0ygY_2nhScHhwvRwa&_nc_zt=23&_nc_ht=scontent.fdub8-1.fna&_nc_gid=WPUPBeORR5LZ7r8qxJcHMg&_nc_ss=7b2a8&oh=00_Af8hQYxZcxafd-91YCPuU8_K96xE7yOkdlj8rq6gcJi_OQ&oe=6A264FF8" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-sm" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/474679180_122132571092428195_2709486338554334620_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yALn8ePHoUkQ7kNvwHoi70H&_nc_oc=AdrqNvNnaEWNk2vUbqxESHO9UEWRMx1pE-Y2sKHaqfbs3v615palY94zT9SJbf8USV17KszxeSlR3sNB1kz4wmjK&_nc_zt=23&_nc_ht=scontent.fdub8-1.fna&_nc_gid=QwotU7lNGkEAEA70mP89JA&_nc_ss=7b2a8&oh=00_Af-ViuSf1Tz11rnKIcGhJ1hoU2n0mD52yEi73sx6Dz1Gag&oe=6A26307B" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+    </div>
+
+    <!-- Row 4: remaining photo centred -->
+    <div class="gallery-grid fade-up" style="margin-top:16px">
+      <div class="gallery-item g-large" onclick="openLightbox(this.querySelector('img').src)">
+        <img src="https://scontent.fdub8-1.fna.fbcdn.net/v/t39.30808-6/474790679_122132544266428195_4932521339170720435_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ehb6KUHcWPAQ7kNvwFWaxTn&_nc_oc=AdoABOn-0u3GHNLLMOuvkqE2PMgBDkr6vHLDvyLoyfOz4Not3jSo2rK0XvC6d3kypjcBwOLEJpGBcr-LSTaVrLr_&_nc_zt=23&se=-1&_nc_ht=scontent.fdub8-1.fna&_nc_gid=yYqnEWia73F_NCR-FjoIlg&_nc_ss=7b2a8&oh=00_Af8nKzqPP_OuD-XbuZEolJ8Kriyo-47IUEeLWaFF1RBkgg&oe=6A265723" alt="Floor Trade Ireland installation" loading="lazy" />
+        <div class="gallery-caption">Real installation</div>
+      </div>
+      <div class="gallery-item g-med" style="background:var(--ink);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;text-align:center;padding:24px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(255,255,255,0.4)"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        <p style="color:rgba(255,255,255,0.7);font-size:.9rem;margin:0;">See more of our work</p>
+        <a href="https://www.facebook.com/share/1BefHsGe6J/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:4px">View on Facebook</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<!-- VISUALISER -->
+<section id="visualiser">
+  <div class="container">
+    <div class="vis-header fade-up">
+      <div class="section-label">Try Before You Buy</div>
+      <h2 class="section-title">See it in your room</h2>
+      <p>Click a floor to see how it looks in a real living space.</p>
+    </div>
+    <div class="vis-wrap fade-up">
+      <div class="vis-room">
+        <img id="visRoomImg" src="https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_03_hr-scaled.jpg" alt="Room preview" />
+        <div class="vis-label" id="visLabel">Aurora · Silk Dreamer</div>
+      </div>
+      <div class="vis-panel">
+        <h4>Select a Floor</h4>
+        <div class="swatch-list" id="swatchList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="t-header fade-up">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">What our customers say</h2>
+      <p>Over 500 homes transformed across Ireland.</p>
+    </div>
+    <div class="reviews-summary fade-up">
+      <div class="stars">★★★★★</div>
+      <div class="reviews-avg">5.0</div>
+      <div class="reviews-count">/ 5 — based on 120+ verified reviews</div>
+    </div>
+    <div class="t-grid">
+      <div class="t-card fade-up"><div class="t-stars">★★★★★</div><div class="t-quote">"It's only become more beautiful — like everything good in this house, it's earning its character. Couldn't be happier with the Alkum Oak."</div><div class="t-author"><div class="t-avatar">SR</div><div><div class="t-name">Sarah R.</div><div class="t-location">Lucan, Co. Dublin</div></div></div></div>
+      <div class="t-card fade-up"><div class="t-stars">★★★★★</div><div class="t-quote">"The fitting team were professional, tidy and fast. Done in a day — two bedrooms and the hallway. Would recommend to anyone."</div><div class="t-author"><div class="t-avatar">MD</div><div><div class="t-name">Mark D.</div><div class="t-location">Navan, Co. Meath</div></div></div></div>
+      <div class="t-card fade-up"><div class="t-stars">★★★★★</div><div class="t-quote">"Ordered samples on Monday, they arrived Wednesday. Brilliant service and the carpet quality is exceptional for the price."</div><div class="t-author"><div class="t-avatar">AO</div><div><div class="t-name">Aoife O'B.</div><div class="t-location">Cork City</div></div></div></div>
+      <div class="t-card fade-up"><div class="t-stars">★★★★★</div><div class="t-quote">"Got the full house laminate bundle — genuinely transformed our home. The free stairs carpet was a brilliant touch."</div><div class="t-author"><div class="t-avatar">PC</div><div><div class="t-name">Paul C.</div><div class="t-location">Portlaoise, Co. Laois</div></div></div></div>
+      <div class="t-card fade-up"><div class="t-stars">★★★★★</div><div class="t-quote">"Came to the showroom not knowing what I wanted. Left with a sample pack and a plan. The advice was genuinely helpful, no hard sell."</div><div class="t-author"><div class="t-avatar">LF</div><div><div class="t-name">Laura F.</div><div class="t-location">Trim, Co. Meath</div></div></div></div>
+      <div class="t-card fade-up"><div class="t-stars">★★★★★</div><div class="t-quote">"The Eclipse vinyl in the kitchen is perfect — we have two kids and a dog. Still looks brand new after 18 months."</div><div class="t-author"><div class="t-avatar">TK</div><div><div class="t-name">Tom K.</div><div class="t-location">Maynooth, Co. Kildare</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-sidebar fade-up">
+        <div class="section-label">Got Questions?</div>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p>Can't find an answer? Reach out on WhatsApp or give us a call — we're always happy to help.</p>
+        <a href="tel:+353896067802" class="btn btn-primary" style="margin-bottom:16px;display:inline-block">📞 Call Us</a><br/>
+        <a href="https://wa.me/353896067802" class="btn btn-outline" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+      <div class="faq-list fade-up">
+        <div class="faq-item"><button class="faq-q">Do you offer free delivery? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — free nationwide delivery across all of Ireland on all orders. Typically 3–5 working days from order confirmation.</div></div></div>
+        <div class="faq-item"><button class="faq-q">Do you supply and fit, or supply only? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Both. We offer supply-only if you have your own fitter. For Leinster, we have an in-house fitting team. Nationwide, we use vetted installation partners.</div></div></div>
+        <div class="faq-item"><button class="faq-q">How long does installation take? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Most standard installations are completed in a single day. Larger jobs typically take 1–2 days. We'll give you an accurate timeframe at quote stage.</div></div></div>
+        <div class="faq-item"><button class="faq-q">Can I order samples before committing? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Absolutely — samples are free and delivered nationwide, usually within 2–3 days. Request from any product card or contact us directly.</div></div></div>
+        <div class="faq-item"><button class="faq-q">What is your returns policy? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">14-day money-back guarantee on all products. Items must be unused and in original packaging. Fitted flooring cannot be returned unless faulty.</div></div></div>
+        <div class="faq-item"><button class="faq-q">Do you have a physical showroom? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — Spring Valley House, Summerhill, Co. Meath (A83 D883). Open Monday to Saturday, 9am–6pm. No appointment needed.</div></div></div>
+        <div class="faq-item"><button class="faq-q">Do you cover all of Ireland? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. We deliver everywhere in Ireland and arrange professional fitting nationwide. We directly cover Leinster with our own team.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Let's find your perfect floor</h2>
+        <p>Whether you know exactly what you want or need some guidance, our team is here to help. Fill in the form for a free, no-obligation quote.</p>
+        <div class="contact-details">
+          <div class="contact-detail"><div class="contact-detail-icon">📍</div><div><div class="contact-detail-label">Showroom</div><div class="contact-detail-value">Spring Valley House, Summerhill,<br/>Co. Meath, A83 D883</div></div></div>
+          <div class="contact-detail"><div class="contact-detail-icon">📞</div><div><div class="contact-detail-label">Phone</div><div class="contact-detail-value"><a href="tel:+353896067802">+353 89 606 7802</a></div></div></div>
+          <div class="contact-detail"><div class="contact-detail-icon">✉️</div><div><div class="contact-detail-label">Email</div><div class="contact-detail-value"><a href="mailto:floortradeireland@gmail.com">floortradeireland@gmail.com</a></div></div></div>
+          <div class="contact-detail"><div class="contact-detail-icon">💬</div><div><div class="contact-detail-label">WhatsApp</div><div class="contact-detail-value"><a href="https://wa.me/353896067802" target="_blank" rel="noopener">Chat on WhatsApp</a></div></div></div>
+        </div>
+        <div class="hours-box">
+          <h4>Opening Hours</h4>
+          <div class="hours-row"><span class="day">Monday – Friday</span><span>9:00am – 6:00pm</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span>9:00am – 6:00pm</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+      <div class="contact-form-wrap fade-up">
+        <div id="contactFormWrap">
+          <div class="form-title">Request a Free Quote</div>
+          <p class="form-sub">We'll get back to you within 24 hours.</p>
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group"><label>First name</label><input type="text" id="firstName" placeholder="John" required /></div>
+              <div class="form-group"><label>Last name</label><input type="text" id="lastName" placeholder="Murphy" required /></div>
+            </div>
+            <div class="form-group"><label>Email address</label><input type="email" id="email" placeholder="john@example.ie" required /></div>
+            <div class="form-group"><label>Phone number</label><input type="tel" id="phone" placeholder="+353 87 000 0000" /></div>
+            <div class="form-group"><label>I'm interested in</label>
+              <select id="interest">
+                <option value="">Select a product type…</option>
+                <option value="Laminate">Laminate</option>
+                <option value="Carpet">Carpet</option>
+                <option value="Vinyl">Vinyl</option>
+                <option value="Artificial Grass">Artificial Grass</option>
+                <option value="Full House Bundle">Full House Bundle</option>
+                <option value="Not sure yet">Not sure yet — need advice</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Tell us about your project</label><textarea id="message" placeholder="Room sizes, current flooring, timeline, any questions…"></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%;padding:16px;font-size:1rem">Send My Enquiry →</button>
+          </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">✅</div>
+          <h3>Thanks — we'll be in touch!</h3>
+          <p>Your enquiry has been received. We aim to respond within 24 hours.</p>
+          <br/><a href="https://wa.me/353896067802" class="btn btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div id="map-section">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9630.9!2d-6.73!3d53.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48677b0000000001%3A0x0!2sSummerhill%2C+Co.+Meath!5e0!3m2!1sen!2sie!4v1000000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Floor Trade Ireland Showroom"></iframe>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="https://floortradeireland.ie/assets/logo-X81Pp4El.png" alt="Floor Trade Ireland" /></div>
+        <p>Curated European flooring — supplied and fitted across Ireland. Floors that age beautifully.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1BefHsGe6J/" class="social-link" title="Facebook" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+      <div class="footer-col"><h5>Products</h5><ul class="footer-links"><li><a href="#products">Laminate</a></li><li><a href="#products">Carpet</a></li><li><a href="#products">Vinyl</a></li><li><a href="#products">Artificial Grass</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul class="footer-links"><li><a href="#craftsmanship">About Us</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#testimonials">Reviews</a></li><li><a href="#offers">Current Offers</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul class="footer-links"><li>Spring Valley House</li><li>Summerhill, Co. Meath</li><li>A83 D883</li><li style="margin-top:8px"><a href="tel:+353896067802">+353 89 606 7802</a></li><li><a href="mailto:floortradeireland@gmail.com">floortradeireland@gmail.com</a></li><li style="margin-top:8px">Mon–Sat: 9am – 6pm</li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Floor Trade Ireland. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/353896067802" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<script>
+// ── Scroll behaviours
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+
+// ── Mobile menu
+document.getElementById('navToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('menuClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+document.querySelectorAll('.ml').forEach(a => a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open')));
+
+// ── FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ── Fade-in on scroll
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+// ── Lightbox
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLightbox(); });
+
+// ── Build product grid
+const grid = document.getElementById('productsGrid');
+PRODUCTS.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'product-card';
+  card.dataset.cat = p.filter;
+  card.innerHTML = `
+    <div class="product-img-wrap">
+      <img class="product-img" src="${p.colours[0].img}" alt="${p.name}" loading="lazy" />
+      <span class="product-cat-badge">${p.category}</span>
+    </div>
+    <div class="product-body">
+      <div class="product-name">${p.name}</div>
+      <div class="product-footer">
+        <span class="product-cta">View Colours →</span>
+        <span class="product-colours">${p.colours.length} colour${p.colours.length !== 1 ? 's' : ''}</span>
+      </div>
+    </div>`;
+  card.addEventListener('click', () => openModal(p));
+  grid.appendChild(card);
+});
+
+// ── Filter tabs
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.product-card').forEach(c => {
+      c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
+    });
+  });
+});
+
+// ── Modal state
+let currentProduct = null;
+let currentColourIdx = 0;
+
+function openModal(product) {
+  currentProduct = product;
+  currentColourIdx = 0;
+  document.getElementById('modalCat').textContent = product.category;
+  document.getElementById('modalTitle').textContent = product.name;
+  document.getElementById('modalDesc').textContent = product.desc;
+  document.getElementById('modalColoursCount').textContent = product.colours.length + ' Colour' + (product.colours.length !== 1 ? 's' : '') + ' Available';
+  renderSwatches(product, 0);
+  document.getElementById('prodModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function renderSwatches(product, activeIdx) {
+  const colour = product.colours[activeIdx];
+  document.getElementById('modalPreviewImg').src = colour.img;
+  document.getElementById('modalPreviewImg').alt = colour.name;
+  document.getElementById('modalSelectedColour').textContent = colour.name;
+
+  const container = document.getElementById('modalSwatches');
+  container.innerHTML = '';
+  product.colours.forEach((c, i) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'swatch-wrap';
+    const swatch = document.createElement('div');
+    swatch.className = 'colour-swatch' + (i === activeIdx ? ' active' : '');
+    const img = document.createElement('img');
+    img.src = c.img;
+    img.alt = c.name;
+    img.loading = 'lazy';
+    swatch.appendChild(img);
+    swatch.addEventListener('click', () => {
+      currentColourIdx = i;
+      renderSwatches(product, i);
+    });
+    const label = document.createElement('div');
+    label.className = 'colour-swatch-name';
+    label.textContent = c.name;
+    wrap.appendChild(swatch);
+    wrap.appendChild(label);
+    container.appendChild(wrap);
+  });
+}
+
+function closeModal() {
+  document.getElementById('prodModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function prefillAndScroll(msgText) {
+  closeModal();
+  const interestEl = document.getElementById('interest');
+  const msgEl = document.getElementById('message');
+  if (currentProduct) {
+    // Try to set matching interest option
+    const cat = currentProduct.filter;
+    const map = { laminate: 'Laminate', carpet: 'Carpet', vinyl: 'Vinyl', grass: 'Artificial Grass' };
+    if (map[cat]) interestEl.value = map[cat];
+    msgEl.value = msgText;
+  }
+  setTimeout(() => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    msgEl.focus();
+  }, 50);
+}
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('prodModal').addEventListener('click', e => {
+  if (e.target === document.getElementById('prodModal')) closeModal();
+});
+
+document.getElementById('modalQuoteBtn').addEventListener('click', () => {
+  if (!currentProduct) return;
+  const colour = currentProduct.colours[currentColourIdx];
+  prefillAndScroll(`Hi, I'm interested in ${currentProduct.name} – ${colour.name}. Could you provide a quote?`);
+});
+
+document.getElementById('modalSampleBtn').addEventListener('click', () => {
+  if (!currentProduct) return;
+  const colour = currentProduct.colours[currentColourIdx];
+  prefillAndScroll(`Hi, I'd like to order a free sample of ${currentProduct.name} – ${colour.name}. Could you arrange this?`);
+});
+
+// ── ESC key closes modal and lightbox
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeModal(); closeLightbox(); }
+});
+
+// ── Visualiser swatches
+const visSwatches = [
+  { name: 'Aurora · Silk Dreamer',    type: 'Carpet',  swatch: 'https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_03_hr-scaled.jpg',  room: 'https://www.phloor.ie/wp-content/uploads/2026/02/Hampton_productshot_03_hr-scaled.jpg' },
+  { name: 'Noble Dreams · Scroll Beige', type: 'Carpet', swatch: 'https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-69-Scroll-Beige.jpg', room: 'https://www.phloor.ie/wp-content/uploads/2021/08/Noble-Dreams-69-Scroll-Beige.jpg' },
+  { name: 'Art Floor Elite XL · Tokyo', type: 'Laminate', swatch: 'https://flatpacked.ie/wp-content/uploads/2025/12/111.jpeg', room: 'https://flatpacked.ie/wp-content/uploads/2025/12/111.jpeg' },
+  { name: 'Art Floor Elite XL · Jawa',  type: 'Laminate', swatch: 'https://flatpacked.ie/wp-content/uploads/2025/12/8.jpeg', room: 'https://flatpacked.ie/wp-content/uploads/2025/12/8.jpeg' },
+  { name: 'Eclipse · Harvest Oak',       type: 'Vinyl',    swatch: 'https://www.phloor.ie/wp-content/uploads/2026/02/Cherbourg-Oak-64_portrait_22751-WEB1280.jpg', room: 'https://www.phloor.ie/wp-content/uploads/2026/02/Cherbourg-Oak-64_portrait_22751-WEB1280.jpg' },
+  { name: 'Windsor Velvet · Vintage White', type: 'Carpet', swatch: 'https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-173.jpg', room: 'https://www.phloor.ie/wp-content/uploads/2020/09/windsor-velvet-173.jpg' },
+];
+
+const swatchList = document.getElementById('swatchList');
+visSwatches.forEach((s, i) => {
+  const item = document.createElement('div');
+  item.className = 'swatch-item' + (i === 0 ? ' active' : '');
+  item.innerHTML = `<img class="swatch-thumb" src="${s.swatch}" alt="${s.name}" loading="lazy" /><div><div class="swatch-name">${s.name}</div><div class="swatch-type">${s.type}</div></div>`;
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.swatch-item').forEach(x => x.classList.remove('active'));
+    item.classList.add('active');
+    const img = document.getElementById('visRoomImg');
+    img.style.opacity = '0.2';
+    setTimeout(() => { img.src = s.room; img.style.opacity = '1'; }, 300);
+    document.getElementById('visLabel').textContent = s.name;
+  });
+  swatchList.appendChild(item);
+});
+
+// ── Contact form submit
+function submitForm(e) {
+  e.preventDefault();
+  document.getElementById('contactFormWrap').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+</script>
+</body>
+</html>
