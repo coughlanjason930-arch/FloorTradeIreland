@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Floor Trade Ireland – Floors that age beautifully</title>
-  <meta name="description" content="Premium flooring supplied and fitted across Ireland. Laminate, carpet, vinyl, artificial grass. Free nationwide delivery. Showroom in Summerhill, Co. Meath." />
+  <meta name="description" content="Premium flooring supplied and fitted across Dublin and surrounding areas. Hardwood, laminate, carpet, vinyl, SPC and artificial grass. Free delivery to Dublin and all surrounding areas." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -4962,7 +4962,7 @@ const PRODUCTS = [
       <div class="hero-stats">
         <div><div class="hero-stat-num">500+</div><div class="hero-stat-label">Homes transformed</div></div>
         <div><div class="hero-stat-num">5★</div><div class="hero-stat-label">Average review rating</div></div>
-        <div><div class="hero-stat-num">Free</div><div class="hero-stat-label">Nationwide delivery</div></div>
+        <div><div class="hero-stat-num">Free</div><div class="hero-stat-label">Dublin &amp; surrounds delivery</div></div>
         <div><div class="hero-stat-num">14-day</div><div class="hero-stat-label">Returns guarantee</div></div>
       </div>
     </div>
@@ -4973,7 +4973,7 @@ const PRODUCTS = [
 <div id="trust-bar">
   <div class="container">
     <div class="trust-items">
-      <div class="trust-item">🚚 Free nationwide delivery</div>
+      <div class="trust-item">🚚 Free Dublin &amp; surrounds delivery</div>
       <div class="trust-item">🔨 Professional fitting team</div>
       <div class="trust-item">🌿 European-sourced materials</div>
       <div class="trust-item">↩️ 14-day returns</div>
@@ -5072,8 +5072,8 @@ const PRODUCTS = [
     </div>
     <div class="products-grid" id="productsGrid"></div>
     <div style="text-align:center;margin-top:48px" class="fade-up">
-      <p style="color:var(--muted);margin-bottom:20px">Showing our full range — we stock many more colours in-store. Free samples delivered nationwide.</p>
-      <a href="#contact" class="btn btn-primary">Request a Free Sample or Quote</a>
+      <p style="color:var(--muted);margin-bottom:20px">Showing our full range — we stock many more colours in-store.</p>
+      <a href="#contact" class="btn btn-primary">Request a Quote</a>
     </div>
   </div>
 </section>
@@ -5096,7 +5096,7 @@ const PRODUCTS = [
       <div class="modal-swatches" id="modalSwatches"></div>
       <div class="modal-actions">
         <button class="btn btn-gold" id="modalQuoteBtn">Get a Quote for This Colour →</button>
-        <button class="btn btn-outline" id="modalSampleBtn">Order a Free Sample</button>
+        <button class="btn btn-outline" id="modalSampleBtn">Enquire About This Colour</button>
       </div>
     </div>
   </div>
@@ -5258,12 +5258,10 @@ const PRODUCTS = [
         <a href="https://wa.me/353896067802" class="btn btn-outline" target="_blank" rel="noopener">💬 WhatsApp</a>
       </div>
       <div class="faq-list fade-up">
-        <div class="faq-item"><button class="faq-q">Do you offer free delivery? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — free nationwide delivery across all of Ireland on all orders. Typically 3–5 working days from order confirmation.</div></div></div>
+        <div class="faq-item"><button class="faq-q">Do you offer free delivery? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — free shipping to Dublin and all surrounding areas. Delivery is typically within 3–5 working days from order confirmation.</div></div></div>
         <div class="faq-item"><button class="faq-q">Do you supply and fit, or supply only? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Both. We offer supply-only if you have your own fitter. For Leinster, we have an in-house fitting team. Nationwide, we use vetted installation partners.</div></div></div>
         <div class="faq-item"><button class="faq-q">How long does installation take? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Most standard installations are completed in a single day. Larger jobs typically take 1–2 days. We'll give you an accurate timeframe at quote stage.</div></div></div>
-        <div class="faq-item"><button class="faq-q">Can I order samples before committing? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Absolutely — samples are free and delivered nationwide, usually within 2–3 days. Request from any product card or contact us directly.</div></div></div>
         <div class="faq-item"><button class="faq-q">What is your returns policy? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">14-day money-back guarantee on all products. Items must be unused and in original packaging. Fitted flooring cannot be returned unless faulty.</div></div></div>
-        <div class="faq-item"><button class="faq-q">Do you have a physical showroom? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — Spring Valley House, Summerhill, Co. Meath (A83 D883). Open Monday to Saturday, 9am–6pm. No appointment needed.</div></div></div>
         <div class="faq-item"><button class="faq-q">Do you cover all of Ireland? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. We deliver everywhere in Ireland and arrange professional fitting nationwide. We directly cover Leinster with our own team.</div></div></div>
       </div>
     </div>
@@ -5525,7 +5523,7 @@ document.getElementById('modalQuoteBtn').addEventListener('click', () => {
 document.getElementById('modalSampleBtn').addEventListener('click', () => {
   if (!currentProduct) return;
   const colour = currentProduct.colours[currentColourIdx];
-  prefillAndScroll(`Hi, I'd like to order a free sample of ${currentProduct.name} – ${colour.name}. Could you arrange this?`);
+  prefillAndScroll(`Hi, I'd like more information about ${currentProduct.name} – ${colour.name}. Could you help?`);
 });
 
 // ── ESC key closes modal and lightbox
