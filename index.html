@@ -107,6 +107,14 @@
     .products-header { text-align: center; margin-bottom: 48px; }
     .products-header p { color: var(--muted); max-width: 540px; margin: 16px auto 0; }
     .products-filter { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+    .product-search-wrap { max-width: 520px; margin: 0 auto 24px; position: relative; }
+    .product-search { width: 100%; padding: 14px 46px 14px 20px; border: 1.5px solid var(--mid); border-radius: 100px; font-family: var(--sans); font-size: .95rem; color: var(--ink); outline: none; transition: border-color .2s, box-shadow .2s; }
+    .product-search:focus { border-color: var(--oak); box-shadow: 0 0 0 3px rgba(200,169,110,.15); }
+    .product-search-icon { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 1.1rem; pointer-events: none; }
+    .product-search-clear { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: var(--mid); border: none; width: 22px; height: 22px; border-radius: 50%; cursor: pointer; color: var(--ink); font-size: .9rem; line-height: 1; display: none; }
+    .product-search-clear.show { display: flex; align-items: center; justify-content: center; }
+    .product-search-clear.show + .product-search-icon { display: none; }
+    .products-noresults { display: none; text-align: center; color: var(--muted); padding: 48px 0; font-size: 1rem; }
     .filter-btn { padding: 8px 22px; border-radius: 100px; border: 1.5px solid var(--mid); background: var(--white); font-size: .88rem; font-weight: 500; cursor: pointer; transition: all .2s; color: var(--ink); font-family: var(--sans); }
     .filter-btn.active, .filter-btn:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
     .products-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 24px; }
@@ -5052,6 +5060,11 @@ const PRODUCTS = [
       <h2 class="section-title">Flooring for every room</h2>
       <p>Hardwood · Engineered Wood · 8mm &amp; 12mm Laminate · SPC Waterproof · Carpet · Carpet Tiles · Vinyl · Artificial Grass. Click any product to preview colours and get a quote.</p>
     </div>
+    <div class="product-search-wrap fade-up">
+      <input type="text" id="productSearch" class="product-search" placeholder="Search products and colours…" autocomplete="off" />
+      <button class="product-search-clear" id="productSearchClear" aria-label="Clear search">&times;</button>
+      <span class="product-search-icon">🔍</span>
+    </div>
     <div class="products-filter fade-up">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="hardwood">Hardwood</button>
@@ -5065,6 +5078,7 @@ const PRODUCTS = [
       <button class="filter-btn" data-filter="grass">Artificial Grass</button>
     </div>
     <div class="products-grid" id="productsGrid"></div>
+    <div class="products-noresults" id="productsNoResults">No products match your search. Try a different term or browse a category above.</div>
     <div style="text-align:center;margin-top:48px" class="fade-up">
       <p style="color:var(--muted);margin-bottom:20px">Showing our full range — we stock many more colours in-store.</p>
       <a href="#contact" class="btn btn-primary">Request a Quote</a>
@@ -5410,6 +5424,8 @@ PRODUCTS.forEach(p => {
   const card = document.createElement('div');
   card.className = 'product-card';
   card.dataset.cat = p.filter;
+  // searchable text = name + category + all colour names
+  card.dataset.search = (p.name + ' ' + p.category + ' ' + p.colours.map(x => x.name).join(' ')).toLowerCase();
   card.innerHTML = `
     <div class="product-img-wrap">
       <img class="product-img" src="${p.colours[0].img}" alt="${p.name}" loading="lazy" />
@@ -5426,16 +5442,44 @@ PRODUCTS.forEach(p => {
   grid.appendChild(card);
 });
 
-// ── Filter tabs
+// ── Combined search + tab filtering
+let activeFilter = 'all';
+let searchTerm = '';
+function applyProductFilters() {
+  let visible = 0;
+  document.querySelectorAll('.product-card').forEach(c => {
+    const matchCat = (activeFilter === 'all' || c.dataset.cat === activeFilter);
+    const matchSearch = (!searchTerm || c.dataset.search.includes(searchTerm));
+    const show = matchCat && matchSearch;
+    c.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('productsNoResults').style.display = visible ? 'none' : 'block';
+}
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.product-card').forEach(c => {
-      c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
-    });
+    activeFilter = btn.dataset.filter;
+    applyProductFilters();
   });
+});
+
+// ── Search input
+const searchInput = document.getElementById('productSearch');
+const searchClear = document.getElementById('productSearchClear');
+searchInput.addEventListener('input', () => {
+  searchTerm = searchInput.value.trim().toLowerCase();
+  searchClear.classList.toggle('show', searchTerm.length > 0);
+  applyProductFilters();
+});
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  searchTerm = '';
+  searchClear.classList.remove('show');
+  applyProductFilters();
+  searchInput.focus();
 });
 
 // ── Modal state
